@@ -9,6 +9,7 @@ function Landing_page() {
         <Link to={"/login"} ><button><b>Login</b></button></Link>
 
 
+
     </div>
   )
 }
