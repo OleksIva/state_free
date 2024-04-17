@@ -1,10 +1,12 @@
-import '../src/styles/App.scss';
 import Home from './pages/Home';
+import DocumentUpload from './DocumentUpload.tsx';
 
 function App() {
   return (
     <div className="App">
     <Home />
+      <DocumentUpload></DocumentUpload>
+      
     </div>
   );
 }
