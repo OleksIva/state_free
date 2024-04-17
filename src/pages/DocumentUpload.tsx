@@ -13,7 +13,6 @@ const DocumentUpload = () =>
     const handleUpload=()=>{
         if (file) {
             console.log("Uploading file:", file.name);
-            // You can perform additional actions like sending the file to a server here
           } else {
             console.log("No file selected");
           }
@@ -22,7 +21,6 @@ const DocumentUpload = () =>
         <>
         <input type="file" onChange={handleChange}/>
         <button onClick={handleUpload}>Upload a file</button>
-        <h1>hello</h1>
         {file && <p>Selected File: {file.name}</p>}
         </>
     );
