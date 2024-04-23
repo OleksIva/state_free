@@ -6,4 +6,4 @@ function ResourcesPage() {
   )
 }
 
-export default Resources_page
+export default ResourcesPage

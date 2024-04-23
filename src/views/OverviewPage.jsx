@@ -6,4 +6,4 @@ function OverviewPage() {
   )
 }
 
-export default Overview_page
+export default OverviewPage

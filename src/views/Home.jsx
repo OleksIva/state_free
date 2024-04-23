@@ -1,8 +1,9 @@
 import React from "react";
+
 function Home() {
-    return(
+    return (
         <div className="home">
-        <h1>Hello ReDi</h1>
+            <h1>Hello ReDi</h1>
         </div>
     )
 }

@@ -6,4 +6,4 @@ function ProfilePage() {
   )
 }
 
-export default Profile_page
+export default ProfilePage

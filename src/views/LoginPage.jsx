@@ -6,4 +6,4 @@ function LoginPage() {
   )
 }
 
-export default Login_page
+export default LoginPage

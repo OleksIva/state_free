@@ -6,4 +6,4 @@ function RegistrationPage() {
   )
 }
 
-export default Registration_page
+export default RegistrationPage
