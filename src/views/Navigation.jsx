@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function NV({user}) {
+function Navigation({user}) {
 
     if (!user) {
         return (null)

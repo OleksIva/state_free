@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Registration_page() {
+function RegistrationPage() {
   return (
     <div>Registration page</div>
   )

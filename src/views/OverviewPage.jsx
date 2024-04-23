@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Overview_page() {
+function OverviewPage() {
   return (
     <div>Overview page</div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Landing_page() {
+function LandingPage() {
   return (
     <div>
         <h1>Landing page</h1>
