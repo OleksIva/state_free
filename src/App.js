@@ -1,5 +1,4 @@
 import '../src/styles/App.scss';
-import Home from './views/Home';
 import { Route, Routes } from 'react-router-dom';
 import LandingPage from './views/LandingPage';
 import RegistrationPage from './views/RegistrationPage';
@@ -19,7 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
       <h1>Checking</h1>
       <Navigation user={user} />
       <Routes>
