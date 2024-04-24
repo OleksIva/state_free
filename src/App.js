@@ -9,18 +9,19 @@ import ProtectedRoutes from './views/ProtectedRoutes';
 import ProfilePage from './views/ProfilePage';
 import OverviewPage from './views/OverviewPage';
 import ResourcesPage from './views/ResourcesPage';
-import NV from './views/Navigation';
+import Navigation from './components/Navigation';
 
 
 function App() {
 
+  /** useState to set user and create protected routes */
   const [user, setUser] = useState(true);
 
   return (
     <div className="App">
       <Home />
       <h1>Checking</h1>
-      <NV user={user} />
+      <Navigation user={user} />
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/register' element={<RegistrationPage />} />
