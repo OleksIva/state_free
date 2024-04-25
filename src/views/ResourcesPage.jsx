@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Resources_page() {
+function ResourcesPage() {
   return (
     <div>Resources page</div>
   )
 }
 
-export default Resources_page
+export default ResourcesPage
