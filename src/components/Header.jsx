@@ -1,10 +1,9 @@
 import React from "react";
 
-function Home() {
+function Header() {
     return (
-        <div className="home">
-        </div>
+        <div className="header"></div>
     )
 }
 
-export default Home;
+export default Header;
