@@ -10,7 +10,6 @@ import OverviewPage from './views/OverviewPage';
 import ResourcesPage from './views/ResourcesPage';
 import Navigation from './components/Navigation';
 
-
 function App() {
 
   /** useState to set user and create protected routes */
