@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { registerUser } from '../Api/api';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -35,13 +36,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await fetch('url_to_your_backend_endpoint', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, password })
-      });
+      const response = await registerUser('Alex', 'alex@gmail.com', '093575792443', '12345>ds')
 
       if (response.ok) {
         // Success
