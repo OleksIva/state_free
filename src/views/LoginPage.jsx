@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../Api/api';
+import { login } from '../store/userSlice';
+
 // import { test } from '../Api/api';
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -20,13 +26,13 @@ const LoginPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Reg expressions for login and password validation
+    // // Reg expressions for login and password validation
     // const usernameRegex = /^[a-zA-Z0-9_-]{3,16}$/;
     // const passwordRegex = /^(?=.*[!@#$%^&*])(?=.{8,})/;
 
     // // Login validation
     // if (!usernameRegex.test(username)) {
-    //   setError('Incorrect login. Should contain 3-16 characters');
+    //   setError('Incorrect login. Username should contain 3-16 characters');
     //   return;
     // }
 
@@ -38,15 +44,18 @@ const LoginPage = () => {
 
     try {
       const response = await registerUser('Alex', 'alex@gmail.com', '093575792443', '12345>ds')
+      dispatch(login(response));
+      navigate('/profile')
+      
 
-      if (response.ok) {
-        // Success
-        console.log('Data was succesfully sent to server');
-      } else {
-        // Error
-        console.error('Login failure:', response.statusText);
-        setError('Failed to login. Please try again.');
-      }
+      // if (response.ok) {
+      //   // Success
+      //   console.log('Data was succesfully sent to server');
+      // } else {
+      //   // Error
+      //   console.error('Login failure:', response.statusText);
+      //   setError('Failed to login. Please try again.');
+      // }
     } catch (error) {
       console.error('Login failure:', error);
       setError('Failed to login. Please try again.');
@@ -75,7 +84,7 @@ const LoginPage = () => {
         </div>
         {error && <div style={{ color: 'white' }}>{error}</div>}
         <button type="submit">Login</button>
-      </form>
+      </form> 
     </div>
   );
 };

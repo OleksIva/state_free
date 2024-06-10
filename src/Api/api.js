@@ -1,3 +1,5 @@
+import { user } from "../data/user"
+
 export async function registerUser(name, email, phone, password) {
     try {
         const response = await fetch('http://localhost:8000/user/register', {
@@ -13,9 +15,7 @@ export async function registerUser(name, email, phone, password) {
             })
         })
     } finally {
-        return {
-            username: 'Alex name',
-        }
+        return user
     }
 
 }
