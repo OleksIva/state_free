@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { registerUser } from '../Api/api';
+// import { test } from '../Api/api';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -20,20 +21,20 @@ const LoginPage = () => {
     event.preventDefault();
 
     // Reg expressions for login and password validation
-    const usernameRegex = /^[a-zA-Z0-9_-]{3,16}$/;
-    const passwordRegex = /^(?=.*[!@#$%^&*])(?=.{8,})/;
+    // const usernameRegex = /^[a-zA-Z0-9_-]{3,16}$/;
+    // const passwordRegex = /^(?=.*[!@#$%^&*])(?=.{8,})/;
 
-    // Login validation
-    if (!usernameRegex.test(username)) {
-      setError('Incorrect login. Should contain 3-16 characters');
-      return;
-    }
+    // // Login validation
+    // if (!usernameRegex.test(username)) {
+    //   setError('Incorrect login. Should contain 3-16 characters');
+    //   return;
+    // }
 
-    // Pwd validation
-    if (!passwordRegex.test(password)) {
-      setError('Incorrect password. Should contain at least 8 characters and one of the following symbols: !@#$%^&*');
-      return;
-    }
+    // // Pwd validation
+    // if (!passwordRegex.test(password)) {
+    //   setError('Incorrect password. Should contain at least 8 characters and one of the following symbols: !@#$%^&*');
+    //   return;
+    // }
 
     try {
       const response = await registerUser('Alex', 'alex@gmail.com', '093575792443', '12345>ds')
