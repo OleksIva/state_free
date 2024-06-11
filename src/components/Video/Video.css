@@ -1,0 +1,23 @@
+.landing-page {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+  .video-section
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }  
+  .video-container {
+  width: 20%;
+  margin-bottom: 20px;
+  }
+
+  .landing-video {
+    width: 50%;
+    height: 100px;
+  }
+  
+ 
