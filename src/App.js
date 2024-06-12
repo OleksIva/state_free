@@ -1,5 +1,5 @@
 import '../src/styles/App.scss';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Router } from 'react-router-dom';
 import LandingPage from './views/LandingPage';
 import RegistrationPage from './views/RegistrationPage';
 import LoginPage from './views/LoginPage';
@@ -8,7 +8,9 @@ import ProtectedRoutes from './views/ProtectedRoutes';
 import ProfilePage from './views/ProfilePage';
 import OverviewPage from './views/OverviewPage';
 import ResourcesPage from './views/ResourcesPage';
-import Navigation from './components/Navigation';
+import Navigation from './components/Navigation/Navigation';
+import Header from './components/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -17,17 +19,24 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Checking</h1>
       <Navigation user={user} />
-      <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/register' element={<RegistrationPage />} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/profile' element={<ProtectedRoutes user={user} > <ProfilePage /> </ProtectedRoutes>} />
-        <Route path='/overview' element={<ProtectedRoutes user={user} > <OverviewPage /> </ProtectedRoutes>} />
-        <Route path='/resources' element={<ProtectedRoutes user={user} > <ResourcesPage /> </ProtectedRoutes>} />
-      </Routes>
+    
+        {/* <Header /> */}
+     <main>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="ResourcesPage" element={<ResourcesPage />} />
+          <Route path="/assignment" element={<div>Assignment Page</div>} />
+          <Route path="/faq" element={<div>FAQ Page</div>} />
+          <Route path="/blog" element={<div>Blog Page</div>} />
+          <Route path="/about" element={<div>About Us Page</div>} />
+          <Route path="/register" element={<div>Register Page</div>} />
+          <Route path="/login" element={<div>Login Page</div>} />
+        </Routes>
+      </main>
+        <Footer/>
     </div>
+
   );
 }
 
