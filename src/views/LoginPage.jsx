@@ -47,7 +47,7 @@ const LoginPage = () => {
       dispatch(login(response));
       navigate('/profile')
       
-
+      // TODO - 
       // if (response.ok) {
       //   // Success
       //   console.log('Data was succesfully sent to server');
