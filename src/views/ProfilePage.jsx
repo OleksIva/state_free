@@ -1,4 +1,5 @@
 import React from 'react'
+import './ProfilePage.css';
 import { useSelector, useDispatch } from 'react-redux'
 import { login, logout } from '../store/userSlice'
 

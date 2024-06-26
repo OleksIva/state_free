@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './ResourcesPage.css';
 import { resourcesData } from '../config/Data';
 
 function ResourcesPage() {
