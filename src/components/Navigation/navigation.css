@@ -1,27 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 nav {
-  background-color: #333;
+  background-color: #beeedcb8;
+  border-bottom: 1px solid #161C28;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: bold;
 }
 
 nav ul {
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0; 
-  overflow: hidden; 
+  width: 65%;
+  display: flex;
+  justify-content: end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+nav h2 {
+  display: flex;
+  width: 20%;
+  justify-content: start;
+  font-size: 30px;
+  font-weight: 700;
+  color: #54BD95;
 }
 
 nav ul li {
-  float: left; 
+  float: left;
 }
 
 nav ul li a {
   display: block;
-  color: white;
   text-align: center;
-  padding: 14px 16px; /* Padding around menu items */
+  padding: 14px 16px;
+  /* Padding around menu items */
   text-decoration: none;
+  color: #A6A6A6;
+}
+
+.aboutUsButton{
+margin-right: 110px;
+}
+
+.signUpButton {
+  border-radius: 10px;
+  background-color: #54BD95;
+  color: white;
 }
 
 nav ul li a:hover {
-  background-color: #111; /* Change background color on hover */
+ color: #000000;
 }
