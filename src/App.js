@@ -1,8 +1,8 @@
 import '../src/styles/App.scss';
 import { Route, Routes, Router } from 'react-router-dom';
 import LandingPage from './views/LandingPage';
-import RegistrationPage from './views/RegistrationPage';
 import LoginPage from './views/LoginPage';
+import RegistrationPage from './views/RegistrationPage';
 import React, { useState } from 'react';
 import ProtectedRoutes from './views/ProtectedRoutes';
 import ProfilePage from './views/ProfilePage';
@@ -30,8 +30,8 @@ function App() {
           <Route path="/faq" element={<div>FAQ Page</div>} />
           <Route path="/blog" element={<div>Blog Page</div>} />
           <Route path="/about" element={<div>About Us Page</div>} />
-          <Route path="/register" element={<div>Register Page</div>} />
-          <Route path="/login" element={<div>Login Page</div>} />
+          <Route path="/register" element={<RegistrationPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </main>
         <Footer/>
