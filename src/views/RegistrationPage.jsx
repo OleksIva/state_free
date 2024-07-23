@@ -41,8 +41,9 @@ const RegistrationPage = () => {
       dispatch(login(response));
       navigate('/profile');
     } catch (error) {
-      console.error('Registration failure:', error);
-      setError('Failed to register. Please try again.');
+      error = String(error).split('Error: ')
+      console.error('Registration failure:', error[1]);
+      setError('Failed to register. '+ error[1] + '. Please try again.');
     }
   };
 
@@ -74,6 +75,10 @@ const RegistrationPage = () => {
 };
 
 export default RegistrationPage;
+
+
+
+
 
 
 // import React, { useState } from 'react';
@@ -144,7 +149,7 @@ export default RegistrationPage;
 //           <label>Password:</label>
 //           <input type="password" value={password} onChange={handlePasswordChange} />
 //         </div>
-//         {error && <div style={{ color: 'white' }}>{error}</div>}
+//         {error && <div style={{ color: 'red' }}>{error}</div>}
 //         <button type="submit">Register</button>
 //       </form>
 //     </div>
@@ -152,6 +157,3 @@ export default RegistrationPage;
 // };
 
 // export default RegistrationPage;
-
-
-

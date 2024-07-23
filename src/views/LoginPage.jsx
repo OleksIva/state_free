@@ -29,8 +29,9 @@ const LoginPage = () => {
       dispatch(login(response));
       navigate('/profile');
     } catch (error) {
-      console.error('Login failure:', error);
-      setError('Failed to login. Please try again.');
+      error = String(error).split('Error: ')
+      console.error('Login failure:', error[1]);
+      setError('Failed to login. ' + error[1] + '. Please try again.');
     }
   };
 
@@ -62,7 +63,6 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
 
 
 
