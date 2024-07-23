@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../Api/api';
 import { login } from '../store/userSlice';
+import './LoginPage.css';
 
 const LoginPage = () => {
   const dispatch = useDispatch();
