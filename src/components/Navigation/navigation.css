@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 nav {
-  background-color: #beeedcb8;
-  border-bottom: 1px solid #161C28;
-  height: 50px;
+  background-color: #C2E3D8;
+  /* border-bottom: 1px solid #161C28; */
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ nav {
 }
 
 nav ul {
-  width: 65%;
+  width: 80%;
   display: flex;
   justify-content: end;
   list-style-type: none;
@@ -25,17 +25,18 @@ nav ul {
   text-align: center;
 }
 
-nav h2 {
+/* nav h2 {
   display: flex;
   width: 20%;
   justify-content: start;
   font-size: 30px;
   font-weight: 700;
   color: #54BD95;
-}
+} */
 
 nav ul li {
   float: left;
+  padding: 0 5px;
 }
 
 nav ul li a {
@@ -44,17 +45,21 @@ nav ul li a {
   padding: 14px 16px;
   /* Padding around menu items */
   text-decoration: none;
-  color: #A6A6A6;
+  color: #000000;
 }
 
-.aboutUsButton{
-margin-right: 110px;
+.anmeldenButton{
+  border-radius: 60px;
+  background-color: #FFFFFF;
+  width: 120px;
+  text-align: center;
 }
 
-.signUpButton {
-  border-radius: 10px;
-  background-color: #54BD95;
-  color: white;
+.registrierenButton {
+  border-radius: 60px;
+  background-color: #FFFF67;
+  width: 120px;
+  text-align: center;
 }
 
 nav ul li a:hover {
