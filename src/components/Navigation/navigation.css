@@ -2,7 +2,7 @@
 
 nav {
   background-color: #C2E3D8;
-  /* border-bottom: 1px solid #161C28; */
+  /* border-bottom: 1px solid white; */
   height: 45px;
   display: flex;
   justify-content: center;
@@ -25,15 +25,6 @@ nav ul {
   text-align: center;
 }
 
-/* nav h2 {
-  display: flex;
-  width: 20%;
-  justify-content: start;
-  font-size: 30px;
-  font-weight: 700;
-  color: #54BD95;
-} */
-
 nav ul li {
   float: left;
   padding: 0 5px;
@@ -48,7 +39,7 @@ nav ul li a {
   color: #000000;
 }
 
-.anmeldenButton{
+.anmeldenButton {
   border-radius: 60px;
   background-color: #FFFFFF;
   width: 120px;
@@ -63,5 +54,5 @@ nav ul li a {
 }
 
 nav ul li a:hover {
- color: #000000;
+  color: #000000;
 }

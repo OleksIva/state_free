@@ -1,58 +1,28 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <div className="left-content">
-          <p>&copy; 2024 My Company</p>
-          <input type="text" placeholder="Your name" className="footer-input" />
-          <textarea placeholder="Your message" className="footer-textarea"></textarea>
-          <button className="contact-button">Contact Us</button>
+      <div className="footer-left">
+        <div className='left-content'>
+          <img src="https://ik.imagekit.io/lnmtrplsk/image%202.png?updatedAt=1721822493760" alt="logo" />
+          <p>A COMMUNITY FOR STATELESS PEOPLE AND THEIR ALLIES</p>
         </div>
-        <div className="social-media">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        <nav className="right-content">
-          <ul className="footer-links">
-            <div className="support-section">
-              <h1>Support</h1>
-              <div className="support-content">
-                <p>Help</p>
-                <p>Date</p>
-                <p>About</p>
-              </div>
-            </div>
-            <div className="support-section">
-              <h1>Support</h1>
-              <div className="support-content">
-                <p>Help</p>
-                <p>Date</p>
-                <p>About</p>
-              </div>
-            </div>
-            <div className="support-section">
-              <h1>Support</h1>
-              <div className="support-content">
-                <p>Help</p>
-                <p>Date</p>
-                <p>About</p>
-              </div>
-            </div>
+      </div>
+      <div className="footer-right">
+        <div className='right-content'>
+          <ul>
+            <li><Link to="about">About</Link></li>
+            <li><Link to="/faq">FAQ</Link></li>
+            <li><Link>Community</Link></li>
+            <li><Link>Kontakt</Link></li>
+            <li><Link>Nutzungsbedinungen</Link></li>
+            <li><Link>Datenschutz</Link></li>
+            <li><Link>Impressum</Link></li>
           </ul>
-        </nav>
+        </div>
       </div>
     </footer>
   );
