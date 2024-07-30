@@ -1,0 +1,35 @@
+.assessment-page {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+.assessment-page__steps {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assessment-page__steps li a {
+    text-decoration: none;
+    background: rgb(209, 209, 209);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+
+.form-container {
+    /* display: flex; */
+    justify-content: center;
+}
+
+.assessment-form__container {
+margin-left: 40%;
+}
+
+.assessment-form__inputs {
+    display: flex;
+    flex-flow: column;
+}
