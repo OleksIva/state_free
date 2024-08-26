@@ -28,6 +28,8 @@ export const userSlice = createSlice({
       hasDocument: "", // "Falls ja, hast du dafür ein Dokument, das das nachweisen kann?"
       triedToObtainProof: "", // "Falls nein, hast du bereits versucht, einen Nachweis dafür zu erlangen?"
       statelessReason: "", // Grund für Staatenlosigkeit
+      aufenthaltstitel: null, 
+      geburtsurkunde: null,
       loggedIn: false,
     },
   },
@@ -49,7 +51,7 @@ export const userSlice = createSlice({
         currentNationality, attributedNationality, everHadNationality,
         revokedNationalityDetails, applicationCountry, applicationDate,
         decision, statelessInOtherCountry, hasDocument,
-        triedToObtainProof, statelessReason
+        triedToObtainProof, statelessReason, aufenthaltstitel, geburtsurkunde,
       } = action.payload;
 
       state.userInfo = {
@@ -61,7 +63,7 @@ export const userSlice = createSlice({
         currentNationality, attributedNationality, everHadNationality,
         revokedNationalityDetails, applicationCountry, applicationDate,
         decision, statelessInOtherCountry, hasDocument,
-        triedToObtainProof, statelessReason
+        triedToObtainProof, statelessReason, aufenthaltstitel, geburtsurkunde,
       };
     },
   },
