@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectDetails } from "../../store/userSlice"; 
+import './assessment.css';
 
 const Result = () => {
   const details = useSelector(selectDetails); 
