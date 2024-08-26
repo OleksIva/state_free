@@ -10,8 +10,9 @@ const RegistrationPage = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [ort, setOrt] = useState('');
   const [error, setError] = useState('');
 
   const handleUsernameChange = (event) => {
@@ -24,8 +25,8 @@ const RegistrationPage = () => {
     setError('');
   };
 
-  const handlePhoneChange = (event) => {
-    setPhone(event.target.value);
+  const handleOrtChange = (event) => {
+    setOrt(event.target.value);
     setError('');
   };
 
@@ -33,128 +34,95 @@ const RegistrationPage = () => {
     setPassword(event.target.value);
     setError('');
   };
+  
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+    setError('');
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (password !== confirmPassword) {
+      setError('Passwords do not match. Please try again.');
+      return;
+    }
 
     try {
-      const response = await registerUser(username, email, phone, password);
+      const response = await registerUser(username, email, password, confirmPassword, ort);
       dispatch(login(response));
       navigate('/profile');
     } catch (error) {
-      error = String(error).split('Error: ')
-      console.error('Registration failure:', error[1]);
-      setError('Failed to register. '+ error[1] + '. Please try again.');
+      const errorMessage = String(error).split('Error: ')[1] || 'Registration failed';
+      console.error('Registration failure:', errorMessage);
+      setError('Failed to register. ' + errorMessage + '. Please try again.');
     }
   };
 
   return (
-    <div>
-      <h2>Register test</h2>
+    <div className="container mt-4 bg-register p-5" style={{ height: '580px', width: '600px' }}>
+      
+      <div className="h1 fs-5">Enter your information to register</div>
+      
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" value={username} onChange={handleUsernameChange} />
+        <div className="form-group row mb-3">
+          <label className="col-12 col-md-2 col-form-label">Username</label>
+          <div className="col-12 col-md-10">
+            <input type="text" className="form-control" value={username} onChange={handleUsernameChange} />
+          </div>
         </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={handleEmailChange} />
+        <div className="form-group row mb-3">
+          <label className="col-12 col-md-2 col-form-label">Email</label>
+          <div className="col-12 col-md-10">
+            <input type="email" className="form-control" value={email} onChange={handleEmailChange} />
+          </div>
         </div>
-        <div>
-          <label>Phone:</label>
-          <input type="text" value={phone} onChange={handlePhoneChange} />
+        <div className="form-group row mb-3">
+          <label className="col-12 col-md-2 col-form-label">Password</label>
+          <div className="col-12 col-md-10">
+            <input type="password" className="form-control" value={password} onChange={handlePasswordChange} />
+          </div>
         </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={handlePasswordChange} />
+        <div className="form-group row mb-3">
+          <label className="col-12 col-md-2 col-form-label">Confirm Password</label>
+          <div className="col-12 col-md-10">
+            <input type="password" className="form-control" value={confirmPassword} onChange={handleConfirmPasswordChange} />
+          </div>
         </div>
-        {error && <div style={{ color: 'red' }}>{error}</div>}
-        <button type="submit">Register</button>
+        <div className="form-group row mb-3">
+          <label className="col-12 col-md-2 col-form-label">Ort</label>
+          <div className="col-12 col-md-10">
+            <input type="text" className="form-control" value={ort} onChange={handleOrtChange} />
+          </div>
+        </div>
+        {error && <div className="alert alert-danger">{error}</div>}
+        
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+          <label className="form-check-label" htmlFor="defaultCheck1">
+            Please read and accept our data privacy policy.
+          </label>
+        </div>
+        
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="defaultCheck2"/>
+          <label className="form-check-label" htmlFor="defaultCheck2">
+            Allow us to save your documents and information based on our data privacy policy.
+          </label>
+        </div>
+        <div className="d-flex flex-column align-items-center">
+    <div className="mb-2 w-50">
+      <button type="submit" className="btn btn-success rounded-pill w-100">Registerieren</button>
+    </div>
+    <div className='w-50'>
+      <button type="button" className="btn btn-light rounded-pill w-100 text-dark border-success" onClick={() => navigate('/login')}>
+        Einloggen
+      </button>
+    </div>
+  </div>
+        
       </form>
     </div>
   );
 };
 
 export default RegistrationPage;
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { useNavigate } from 'react-router-dom';
-// import { registerUser } from '../Api/api';
-// import { login } from '../store/userSlice';
-
-// const RegistrationPage = () => {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const [username, setUsername] = useState('');
-//   const [email, setEmail] = useState('');
-//   const [phone, setPhone] = useState('');
-//   const [password, setPassword] = useState('');
-//   const [error, setError] = useState('');
-
-//   const handleUsernameChange = (event) => {
-//     setUsername(event.target.value);
-//     setError('');
-//   };
-
-//   const handleEmailChange = (event) => {
-//     setEmail(event.target.value);
-//     setError('');
-//   };
-
-//   const handlePhoneChange = (event) => {
-//     setPhone(event.target.value);
-//     setError('');
-//   };
-
-//   const handlePasswordChange = (event) => {
-//     setPassword(event.target.value);
-//     setError('');
-//   };
-
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-
-//     try {
-//       const response = await registerUser(username, email, phone, password);
-//       dispatch(login(response));
-//       navigate('/profile');
-//     } catch (error) {
-//       console.error('Registration failure:', error);
-//       setError('Failed to register. Please try again.');
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Register</h2>
-//       <form onSubmit={handleSubmit}>
-//         <div>
-//           <label>Username:</label>
-//           <input type="text" value={username} onChange={handleUsernameChange} />
-//         </div>
-//         <div>
-//           <label>Email:</label>
-//           <input type="email" value={email} onChange={handleEmailChange} />
-//         </div>
-//         <div>
-//           <label>Phone:</label>
-//           <input type="text" value={phone} onChange={handlePhoneChange} />
-//         </div>
-//         <div>
-//           <label>Password:</label>
-//           <input type="password" value={password} onChange={handlePasswordChange} />
-//         </div>
-//         {error && <div style={{ color: 'red' }}>{error}</div>}
-//         <button type="submit">Register</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default RegistrationPage;

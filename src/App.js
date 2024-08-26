@@ -12,6 +12,8 @@ import ResourcesPage from './views/ResourcesPage';
 import Navigation from './components/Navigation/Navigation';
 import Header from './components/Header';
 import Footer from './components/Footer/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
