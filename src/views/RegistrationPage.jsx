@@ -50,7 +50,7 @@ const RegistrationPage = () => {
 
   return (
     <div>
-      <h2>Register</h2>
+      <h2>Register test</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
