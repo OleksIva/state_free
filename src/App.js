@@ -21,10 +21,10 @@ function App() {
   const [user, setUser] = useState(true);
 
   return (
-    <div className="App">
+    <div >
       <Navigation user={user} />
     
-        {/* <Header /> */}
+       
      <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
