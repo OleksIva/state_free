@@ -47,14 +47,14 @@ function LandingPage() {
       </div>
     </div>
     <div className="row bg-white">
-      <div className="col-6 d-flex justify-content-center">
+      <div className="col-md-6 d-flex justify-content-center">
       <img
             src={loginRegisterIllustration}
             className="passbort-img"
             alt="Passport Illustration"
           />
       </div>
-      <div className="col-6 mt-5 ">
+      <div className="col-md-6 mt-5 ">
         <div className="row">
           <div className="col-12 mb-5">
         <h1 className="mb-5">YOUR DIGITAL CASE</h1>
@@ -64,8 +64,8 @@ function LandingPage() {
 
         </p>
         </div>
-       
-          <div className="col-md-4 ">
+        <div className="row">
+        <div className="col-md-6 ">
             <button
               type="button"
               className="btn btn-light rounded-pill text-dark border-success btn-home-einlogen"
@@ -75,7 +75,7 @@ function LandingPage() {
             </button>
 
         </div>
-        <div className="col-md-4">
+        <div className="col-md-6">
         <button
               type="submit"
               className="btn-home-register rounded-pill "
@@ -83,12 +83,17 @@ function LandingPage() {
               Registerieren
             </button>
           </div>
+
+        </div>
+       
+          
+        
         </div>
       </div>
 
     </div>
     <div className="row home-tranzpranz p-5">
-      <div className="col-12">
+      <div className="col-md-12">
         <h1 className="pb-3 ">TRANSPARENZ</h1>
         <p className="font-weight-bold">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias dignissimos animi reprehenderit sapiente dolorum fugiat, quis perspiciatis minus accusamus non aperiam sunt similique! Nisi ea rem beatae laudantium nobis!
@@ -108,8 +113,8 @@ function LandingPage() {
             alt="Passport Illustration"
           />
       </div>
-      <p className="text-portrait text-center py-2 d-flex ">
-        Step 3: Fill out the questionary
+      <p className="text-portrait py-2 d-flex justify-content-center">
+        Step 1: Collect documents
 
       </p>
       </div>
@@ -122,7 +127,7 @@ function LandingPage() {
           />
       </div>
       <p className="text-portrait text-center py-2">
-        Step 3: Fill out the questionary
+        Step 2: Create an acccount
 
       </p>
       </div>

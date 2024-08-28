@@ -63,17 +63,12 @@
 
 }
 .text-portrait {
-  font-size: 23px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: bold;
   height: 70px;
   width: 400px;
   border-color: black;
   border-width: 3px;
   border-style: solid; 
   margin-top: .5px;
-}
-.img-flex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
