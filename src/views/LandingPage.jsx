@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import loginRegistetIllustrationPoprtraity from "../assets/Login_register illustration - poprtrait.jpg"
 import passportIllustrationPortrait from "../assets/Passport illustration - portrait.jpg"
 import questionIllustrationPortrait from "../assets/Question illustration - portrait.jpg"
+import { Link } from 'react-router-dom';
 import "./LandingPage.css";
 
 function LandingPage() {
@@ -47,7 +48,7 @@ function LandingPage() {
       </div>
     </div>
     <div className="row bg-white">
-      <div className="col-md-6 d-flex justify-content-center">
+      <div className="col-md-6 d-flex justify-content-center ">
       <img
             src={loginRegisterIllustration}
             className="passbort-img"
@@ -65,7 +66,7 @@ function LandingPage() {
         </p>
         </div>
         <div className="row">
-        <div className="col-md-6 ">
+        <div className="col-md-4">
             <button
               type="button"
               className="btn btn-light rounded-pill text-dark border-success btn-home-einlogen"
@@ -75,10 +76,11 @@ function LandingPage() {
             </button>
 
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 ">
         <button
               type="submit"
               className="btn-home-register rounded-pill "
+              onClick={() => navigate("/register")}
             >
               Registerieren
             </button>
@@ -99,7 +101,9 @@ function LandingPage() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias dignissimos animi reprehenderit sapiente dolorum fugiat, quis perspiciatis minus accusamus non aperiam sunt similique! Nisi ea rem beatae laudantium nobis!
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae repellat dolore est veniam autem nisi, fugiat fugit explicabo ea excepturi sapiente dolor dolores! Mollitia fuga iure, provident expedita id dolorum.
         </p>
-        <button type="submit" className="btn-home-tranzpranz rounded-pill">Read more</button>
+        <Link to="/transparenz" className="btn-home-tranzpranz rounded-pill">
+      Read more
+    </Link>
 
       </div>
 

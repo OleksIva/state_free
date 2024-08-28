@@ -11,6 +11,7 @@ import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/stayles/App.scss';
+import TRANSPARENZ from './views/Transparenz';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/about" element={<div>About Us Page</div>} />
           <Route path="/register" element={<RegistrationPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/transparenz" element={<TRANSPARENZ />} />
         </Routes>
       </main>
       <Footer />
