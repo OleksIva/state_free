@@ -1,0 +1,14 @@
+.titel {
+  font-size: 37px !important;
+  font-weight: 520;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+}
+.text{
+    font-size: 18px !important;
+    font-family: "Roboto", sans-serif;
+}
+.color-faq{
+    color: #36d1b2; 
+}
