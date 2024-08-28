@@ -10,6 +10,7 @@ import ResourcesPage from './views/ResourcesPage';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/stayles/App.scss';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className='App'>
       <Navigation user={user} />
-      <main>
+      <main className='flex-grow-1'>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
@@ -34,5 +35,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

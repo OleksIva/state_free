@@ -42,3 +42,38 @@
   font-weight: 500 !important;
   
 }
+.btn-home-tranzpranz{
+  color: black; 
+  border-color: #fff; 
+  background-color: #fff;
+  height: 45px;
+  width: 240px;
+  font-weight: 500 !important;
+
+}
+.home-tranzpranz{
+  background-color:  #C2E3D8;
+  height: 400px;
+  width: 100%;
+  font-weight: bold;
+}
+.img-portrait{
+  width: 400px;
+  height: 500px;
+
+}
+.text-portrait {
+  font-size: 23px;
+  font-weight: 500;
+  height: 70px;
+  width: 400px;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid; 
+  margin-top: .5px;
+}
+.img-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

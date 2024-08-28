@@ -2,6 +2,9 @@ import React from "react";
 import passportIllustration from "../assets/Passport.jpg";
 import loginRegisterIllustration from "../assets/Login_register.png"
 import { useNavigate } from "react-router-dom";
+import loginRegistetIllustrationPoprtraity from "../assets/Login_register illustration - poprtrait.jpg"
+import passportIllustrationPortrait from "../assets/Passport illustration - portrait.jpg"
+import questionIllustrationPortrait from "../assets/Question illustration - portrait.jpg"
 import "./LandingPage.css";
 
 function LandingPage() {
@@ -9,7 +12,7 @@ function LandingPage() {
   
   return (
     <div className="container-fluid mt-0 g-0 py-1">
-    <div className="bg-color landing-page-above">
+    <div className="landing-page-above">
       <div className="row h-100">
        
         <div className="col-md-4 d-flex align-items-center justify-content-center text-left text-above">
@@ -62,7 +65,7 @@ function LandingPage() {
         </p>
         </div>
        
-          <div className="col-4 ">
+          <div className="col-md-4 ">
             <button
               type="button"
               className="btn btn-light rounded-pill text-dark border-success btn-home-einlogen"
@@ -72,7 +75,7 @@ function LandingPage() {
             </button>
 
         </div>
-        <div className="col-4">
+        <div className="col-md-4">
         <button
               type="submit"
               className="btn-home-register rounded-pill "
@@ -84,16 +87,58 @@ function LandingPage() {
       </div>
 
     </div>
-    <div className="row">
+    <div className="row home-tranzpranz p-5">
       <div className="col-12">
-        <h1 >TRANSPARENZ</h1>
-        <p>
+        <h1 className="pb-3 ">TRANSPARENZ</h1>
+        <p className="font-weight-bold">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias dignissimos animi reprehenderit sapiente dolorum fugiat, quis perspiciatis minus accusamus non aperiam sunt similique! Nisi ea rem beatae laudantium nobis!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae repellat dolore est veniam autem nisi, fugiat fugit explicabo ea excepturi sapiente dolor dolores! Mollitia fuga iure, provident expedita id dolorum.
         </p>
-        <button type="submit">Read more</button>
+        <button type="submit" className="btn-home-tranzpranz rounded-pill">Read more</button>
 
       </div>
 
+    </div>
+    <div className="row m-5 ">
+      <div className="col-md-4 my-5 d-flex flex-column align-items-end justify-content-end  g-0">
+      <div >
+      <img
+            src={passportIllustrationPortrait}
+            className="img-portrait"
+            alt="Passport Illustration"
+          />
+      </div>
+      <p className="text-portrait text-center py-2 d-flex ">
+        Step 3: Fill out the questionary
+
+      </p>
+      </div>
+      <div className="col-md-4 my-5 d-flex flex-column align-items-center justify-content-end g-0">
+      <div >
+      <img
+            src={loginRegistetIllustrationPoprtraity}
+            className="img-portrait"
+            alt="Passport Illustration"
+          />
+      </div>
+      <p className="text-portrait text-center py-2">
+        Step 3: Fill out the questionary
+
+      </p>
+      </div>
+      <div className="col-md-4 my-5 g-0">
+      <div className=" d-flex justify-content-start">
+      <img
+            src={questionIllustrationPortrait}
+            className="img-portrait"
+            alt="Passport Illustration"
+          />
+      </div>
+      <p className="text-portrait text-center py-2">
+        Step 3: Fill out the questionary
+
+      </p>
+      </div>
     </div>
     </div>
     
