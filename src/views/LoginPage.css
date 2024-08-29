@@ -1,0 +1,10 @@
+.login-page{
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    height:550px!important;
+    background-color: #C2E3D8;
+    margin-top: 100px !important;
+    margin-left: 250px !important;
+    
+}

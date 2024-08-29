@@ -1,9 +1,12 @@
-body, html, #root {
+html, body {
+  overflow-x: hidden; 
+  height: 100%;
   margin: 0;
-  padding: 0;
-  
-  display: flex;
-  
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .App {
@@ -12,10 +15,7 @@ body, html, #root {
   min-height: 100vh;
 }
 
-.content{
-  text-align: left;
-}
 main {
-  flex: 1; /* This makes the main content take up the available space */
-  
+  flex: 1;
+  text-align: left;
 }
