@@ -7,7 +7,7 @@ function Kontakt() {
   return (
     <div className="container">
       <div className="row py-5">
-        <div className="col-md-6 d-flex justify-content-center align-items-end pt-5">
+        <div className="col-md-4 d-flex justify-content-start align-items-end pt-5 p-0 ">
           <img
             src={paperPlan}
             className="passbort-img"
@@ -15,7 +15,7 @@ function Kontakt() {
             style={{ width: "60%" , height: "66%" }}
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-8">
           <div className="row">
             <div className="col-md-12 pt-5 text">
               <p>
@@ -41,7 +41,7 @@ function Kontakt() {
                 <div className="form-group">
                   <input
                     type="email"
-                    className="form-control"
+                    className="form-control style-email"
                     id="exampleFormControlInput1"
                     placeholder="Email"
                   />
@@ -49,10 +49,11 @@ function Kontakt() {
 
                 <div className="form-group">
                   <textarea
-                    className="form-control"
+                    className="form-control style-email"
                     id="exampleFormControlTextarea1"
                     placeholder="Geben Sie Ihre Nachricht ein.."
                     rows="6"
+                   
                   ></textarea>
                 </div>
               </form>

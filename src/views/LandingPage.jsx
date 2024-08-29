@@ -117,20 +117,20 @@ function LandingPage() {
             alt="Passport Illustration"
           />
       </div>
-      <p className="text-portrait py-2 d-flex justify-content-center">
+      <p className="text-portrait py-2 d-flex justify-content-center mt-0">
         Step 1: Collect documents
 
       </p>
       </div>
       <div className="col-md-4 my-5 d-flex flex-column align-items-center justify-content-end g-0">
-      <div >
+      
       <img
             src={loginRegistetIllustrationPoprtraity}
             className="img-portrait"
             alt="Passport Illustration"
           />
-      </div>
-      <p className="text-portrait text-center py-2">
+      
+      <p className="text-portrait text-center py-2  mt-0">
         Step 2: Create an acccount
 
       </p>
@@ -143,7 +143,7 @@ function LandingPage() {
             alt="Passport Illustration"
           />
       </div>
-      <p className="text-portrait text-center py-2">
+      <p className="text-portrait text-center py-2 mt-0">
         Step 3: Fill out the questionary
 
       </p>
