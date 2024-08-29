@@ -67,15 +67,17 @@ const RegistrationPage = () => {
 
   return (
     <div
-      className="container mt-5 bg-register p-5 sm-custom-text mobile-container"
-      style={{ height: "550px", width: "670px" }}
+      className="container registe-page sm-custom-text"  
     >
-      <div className="h1 fs-5">Enter your information to register</div>
+      <div className="row ">
+        <div className="row">
+      <div className="col-12  header-titel justify-content-center align-items-center">Enter your information to register</div>
+      </div>
 
       <form onSubmit={handleSubmit}>
         <div className="form-group row mb-3">
-          <label className="col-12 col-md-2 col-form-label input-label">User name</label>
-          <div className="col-12 col-md-10">
+          <label className="col-md-4 input-label">Benutzername</label>
+          <div className="col-md-8">
             <input
               type="text"
               className="form-control input-field"
@@ -85,8 +87,8 @@ const RegistrationPage = () => {
           </div>
         </div>
         <div className="form-group row mb-3">
-          <label className="col-12 col-md-2 col-form-label input-label">Email</label>
-          <div className="col-12 col-md-10">
+          <label className="col-md-4 col-form-label input-label">E-Mail</label>
+          <div className="col-md-8">
             <input
               type="email"
               className="form-control input-field"
@@ -96,8 +98,8 @@ const RegistrationPage = () => {
           </div>
         </div>
         <div className="form-group row mb-3">
-          <label className="col-12 col-md-2 col-form-label input-label">Password</label>
-          <div className="col-12 col-md-10">
+          <label className="col-md-4 col-form-label input-label">Kennwort</label>
+          <div className="col-md-8">
             <input
               type="password"
               className="form-control input-field"
@@ -107,10 +109,10 @@ const RegistrationPage = () => {
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-12 col-md-2 col-form-label 1h-sm  input-label">
-            Confirm Password
+          <label className="col-md-4 col-form-label 1h-sm  input-label mb-3">
+            Kennwort Wiederholen
           </label>
-          <div className="col-12 col-md-10">
+          <div className="col-md-8">
             <input
               type="password"
               className="form-control input-field"
@@ -119,9 +121,9 @@ const RegistrationPage = () => {
             />
           </div>
         </div>
-        <div className="form-group row mb-3 input-label">
-          <label className="col-12 col-md-2 col-form-label">Ort</label>
-          <div className="col-12 col-md-10">
+        <div className="form-group row mb-3 ">
+          <label className="col-md-4 col-form-label input-label">Ort</label>
+          <div className="col-md-8">
             <input
               type="text"
               className="form-control input-field"
@@ -131,6 +133,8 @@ const RegistrationPage = () => {
           </div>
         </div>
         {error && <div className="alert alert-danger">{error}</div>}
+        <div className="row">
+          <div className="col-12 checkbox-two  pt-3">
 
         <div className="form-check">
           <input
@@ -139,13 +143,14 @@ const RegistrationPage = () => {
             value=""
             id="defaultCheck1"
           />
-          <label className="form-check-label text-checkbox" htmlFor="defaultCheck1">
+          <label className="form-check-label text-checkbox " htmlFor="defaultCheck1">
             Please read and accept our data{" "}
             <span className="fw-bold text-decoration-underline">
               privacy policy.
             </span>
           </label>
         </div>
+      
 
         <div className="form-check">
           <input
@@ -159,26 +164,31 @@ const RegistrationPage = () => {
             privacy.
           </label>
         </div>
-        <div className="d-flex flex-column align-items-center gap-2 sm-custom-text pt-5">
+        </div>
+        </div>
+        <div className="row">
+        <div className=" col-12 d-flex flex-column align-items-end justify-content-center gap-3  py-3 total-buttun-form  ">
           <div className="mb-2 w-50">
             <button
               type="submit"
-              className="btn-matte-green rounded-pill w-100"
+              className="rounded-pill btn-home-register"
             >
               Registerieren
             </button>
           </div>
-          <div className="w-50">
+          <div className="w-50 col-12">
             <button
               type="button"
-              className="btn btn-light rounded-pill w-100 text-dark border-success"
+              className="btn-home-einlogen rounded-pill"
               onClick={() => navigate("/login")}
             >
               Einloggen
             </button>
           </div>
         </div>
+        </div>
       </form>
+      </div>
     </div>
   );
 };
