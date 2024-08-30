@@ -16,7 +16,7 @@ function LandingPage() {
     <div className="landing-page-above">
       <div className="row h-100">
        
-        <div className="col-md-4 d-flex align-items-center justify-content-center text-left text-above">
+        <div className="col-md-3 d-flex align-items-center justify-content-center mx-5 text-above ">
           <div>
             <p className="mb-0">STATEFERR</p>
             <p className="mb-0">CASE</p>
@@ -24,7 +24,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="col-md-4 d-flex align-items-center justify-content-center">
+        <div className="col-md-4 d-flex justify-content-center">
           <img
             src={passportIllustration}
             className="passbort-img"
@@ -32,7 +32,7 @@ function LandingPage() {
           />
         </div>
 
-        <div className="col-md-4 d-flex flex-column align-items-center justify-content-center p-4">
+        <div className="col-md-4 d-flex flex-column align-items-center justify-content-center p-4 text-left-above">
           <div >
             A comprehensive tool to guide<br/>
             you through the process of<br/>
@@ -40,7 +40,7 @@ function LandingPage() {
           </div>
           <button
             type="submit"
-            className="btn-home-above rounded-pill mt-4"
+            className="btn-home-register rounded-pill mt-4"
           >
             Start your Application
           </button>
@@ -94,18 +94,22 @@ function LandingPage() {
       </div>
 
     </div>
-    <div className="row home-tranzpranz p-5">
-      <div className="col-md-12">
+    <div className="row p-5">
+      <div className="col-md-12 home-tranzpranz">
         <h1 className="pb-3 ">TRANSPARENZ</h1>
-        <p className="font-weight-bold">
+        <p className="text-tranzpranz">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias dignissimos animi reprehenderit sapiente dolorum fugiat, quis perspiciatis minus accusamus non aperiam sunt similique! Nisi ea rem beatae laudantium nobis!
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae repellat dolore est veniam autem nisi, fugiat fugit explicabo ea excepturi sapiente dolor dolores! Mollitia fuga iure, provident expedita id dolorum.
         </p>
-        <Link to="/transparenz" className="btn-home-tranzpranz rounded-pill">
+        <div className="col-md-12">
+      <Link to="/transparenz" className=" btn-home-tranzpranz-readme  rounded-pill ">
       Read more
     </Link>
 
       </div>
+
+      </div>
+      
 
     </div>
     <div className="row m-5 ">

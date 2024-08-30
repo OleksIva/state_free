@@ -12,7 +12,7 @@ function Kontakt() {
             src={paperPlan}
             className="passbort-img"
             alt="Paper Plane Illustration"
-            style={{ width: "60%" , height: "66%" }}
+            style={{ width: "70%" , height: "66%" }}
           />
         </div>
         <div className="col-md-8">
@@ -36,7 +36,7 @@ function Kontakt() {
           </div>
 
           <div className="row mt-5">
-            <div className="col-md-12">
+            <div className="col-md-12 g-0 ">
               <form>
                 <div className="form-group">
                   <input
@@ -52,7 +52,8 @@ function Kontakt() {
                     className="form-control style-email"
                     id="exampleFormControlTextarea1"
                     placeholder="Geben Sie Ihre Nachricht ein.."
-                    rows="6"
+                    style={{ height: "200px" }}
+                    rows="10"
                    
                   ></textarea>
                 </div>
