@@ -47,7 +47,7 @@ function Kontakt() {
                   />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group mt-2">
                   <textarea
                     className="form-control style-email"
                     id="exampleFormControlTextarea1"
