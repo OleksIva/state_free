@@ -1,109 +1,119 @@
-
-
-.landing-page-above{
-    width: 100%;
-    height: 574px;
-    background-color:  #C2E3D8;
-    font-size: 20px;
-    color: black;
-    padding: 0;
-    margin: 0;
-   
-    
+.landing-page-above {
+  width: 100%;
+  height: 574px;
+  background-color: #c2e3d8;
+  font-size: 20px;
+  color: black;
+  padding: 0;
+  margin: 0;
 }
-.text-above{
-    font-size: 53px;
-    font-weight: 700;
-   
-   
-   
-   
-    
+.text-above {
+  font-size: 53px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  margin-right: 40px;
+  
 }
-.text-left-above{
+.text-left-above {
   font-size: 18px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
 }
-.passbort-img{
-    width: 420px;
-    height: 420px;
-   
-    margin-top: 90px;
-    margin-bottom: 90px;
-    
+.passbort-img {
+  width: 420px;
+  height: 420px;
 
-  
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.login-register-illustration {
+  width: 420px;
+  height: 420px;
+
+  margin-top: 90px;
+  margin-bottom: 90px;
+  margin-left: 180px;
 }
 
 .btn-home-register {
-  background-color: #36d1b2; 
-  color: white; 
-  border: black; 
-  height: 46px !important;
+  background-color: #36d1b2;
+  color: white;
+  border: black;
+  height: 56px !important;
   width: 254px !important;
   font-family: "Roboto", sans-serif;
   font-weight: 500 !important;
   font-size: 18px !important;
 }
 .btn-home-einlogen {
-  color: white; 
-  border-color: #36d1b2; 
-  height: 45px;
-  width: 290px;
+  background-color: #fff;
+  color: white;
+  border-color: #36d1b2;
+  height: 56px;
+  width: 254px !important;
   font-weight: 500 !important;
-  font-size: 20px !important;
-  
+  font-size: 18px !important;
+  font-family: "Roboto", sans-serif;
+}
+h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700 !important;
+    font-size: 36px !important;
+}
+.digital-case{
+  margin-top: 140px !important;
 }
 .btn-home-tranzpranz {
   display: inline-block;
   padding: 10px 20px;
   background-color: #fff;
-  color:black;
+  color: black;
   text-align: center;
-  text-decoration: none; 
+  text-decoration: none;
   border-radius: 50px;
-  border: none; 
+  border: none;
   cursor: pointer;
   width: 250px;
   height: 50px;
-  
 }
 .btn-home-tranzpranz-readme {
   display: inline-block;
   padding: 10px 20px;
   background-color: #fff;
-  color:black;
+  color: black;
   text-align: center;
-  text-decoration: none; 
+  text-decoration: none;
   border-radius: 50px;
-  border: none; 
+  border: none;
   cursor: pointer;
   width: 250px;
   height: 50px;
   font-weight: 400 !important;
   font-size: 18px !important;
   font-family: "Roboto", sans-serif;
-  margin-left: 120px;
+  margin-left: 190px;
 }
-.text-tranzpranz{
+.text-tranzpranz {
   font-size: 16px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   color: #000000;
   
-  margin-left: 120px;
+
+  margin-left: 190px;
 }
-.home-tranzpranz h1{
+.home-tranzpranz h1 {
   font-size: 36px;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   color: black;
   margin-top: 90px;
-  margin-left: 120px;
+  margin-left: 190px;
+  width: 100% !important;
 }
-.home-tranzpranz{
-  background-color:  #C2E3D8;
+.home-tranzpranz {
+  background-color: #c2e3d8;
   height: 414px;
   width: 100%;
   font-weight: 600;
@@ -112,29 +122,30 @@
   font-family: "Roboto", sans-serif;
   color: #000000;
 }
-.btn-home-readmore{
-  background-color: #fff; 
-  color: black; 
-  border: black; 
+.btn-home-readmore {
+  background-color: #fff;
+  color: black;
+  border: black;
   height: 70px !important;
   width: 240px !important;
   font-family: "Roboto", sans-serif;
   font-weight: 500 !important;
   font-size: 18px !important;
-  margin-left: 120px;
+  margin-left: 170px;
 }
-.img-portrait{
-  width: 400px;
-  height: 500px;
-
+.img-portrait {
+  width: 360px;
+  height: 420px;
 }
 .text-portrait {
-  font-size: 26px;
-  font-weight: bold;
-  height: 70px;
-  width: 400px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  height: 60px;
+  width: 360px;
   border-color: black;
   border-width: 3px;
-  border-style: solid; 
-  margin-top: .5px;
+  border-style: solid;
+  margin-top: 0.5px;
 }
