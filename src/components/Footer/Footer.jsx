@@ -9,7 +9,7 @@ function Footer() {
       <div className="footer-left">
         <div className='left-content'>
           <img src="https://ik.imagekit.io/lnmtrplsk/image%202.png?updatedAt=1721822493760" alt="logo" />
-          <p>A COMMUNITY FOR STATELESS PEOPLE AND THEIR ALLIES</p>
+          <p className='mt-3'>A COMMUNITY FOR STATELESS PEOPLE AND THEIR ALLIES</p>
         </div>
       </div>
       <div className="footer-right">

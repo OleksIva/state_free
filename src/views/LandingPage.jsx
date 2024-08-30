@@ -95,7 +95,7 @@ function LandingPage() {
       </div>
       <div className="row">
         <div className="col-md-12 home-tranzpranz">
-          <h1 className="pb-3 ">TRANSPARENZ</h1>
+          <h1 className="pb-3 ">TRANSPARENCY</h1>
           <p className="text-tranzpranz">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
             molestias dignissimos animi reprehenderit sapiente dolorum fugiat,

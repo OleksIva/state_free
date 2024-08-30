@@ -8,12 +8,12 @@ import './LoginPage.css';
 const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
     setError(''); 
   };
 
@@ -26,7 +26,7 @@ const LoginPage = () => {
     event.preventDefault();
 
     try {
-      const response = await loginUser(username, password);
+      const response = await loginUser(email, password);
       dispatch(login(response));
       navigate('/profile');
     } catch (error) {
@@ -37,34 +37,54 @@ const LoginPage = () => {
   };
 
   return (
-    <div className='container'>
-      <div className='row login-page py-5 '>
-        <div className='col-md-12 text-center'>
-          <p>Melden SIe sich bei Ihrem Konto an</p>
+    <div className='container login-page'>
+      <div >
+      
+      <div className='row  '>
+        <div className='col-md-12 text-title-login d-flex  justify-content-center'>
+          <p>Melden Sie sich bei Ihrem Konto an</p>
 
       </div>
+      </div>
+      
+    
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
+        <div className='row'>
+        <div className='col-md-12 '>
+       
+         
           <input
             type="text"
-            value={username}
-            onChange={handleUsernameChange}
+            value={email}
+            onChange={ handleEmailChange}
+            className='input-email'
+            placeholder='E-Mail'
+            
           />
+          <i className="bi bi-envelope email-icon"></i>
         </div>
+        </div>
+        <div className='row'>
+        <div className='col-md-12 '>
         <div>
-          <label>Password:</label>
+         
           <input
             type="password"
             value={password}
             onChange={handlePasswordChange}
+            className='input-password'
+            placeholder='Password'
           />
+        </div>
+        </div>
         </div>
         {error && <div style={{ color: 'red' }}>{error}</div>}
         <button type="submit">Login</button>
       </form>
-      </div> 
-    </div>
+      </div>
+      </div>
+      
+    
   );
 };
 
