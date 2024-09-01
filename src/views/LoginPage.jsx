@@ -100,13 +100,13 @@ const LoginPage = () => {
                   Einloggen
                 </button>
               </div>
-              <div className='row'>
-                <div className='col-12 d-flex justify-content-center'>
-                  <div className='text-register-loinpage'>
+              <div className='row  d-flex flex-column g-0'>
+                <div className='col-12 g-0 d-flex justify-content-center align-items-center'>
+                  <div className='text-register-loinpage '>
                     haben Sie noch kein Konto?
                   </div>
                 </div>
-                <div className="col-12 d-flex justify-content-center">
+                <div className="col-12 g-0">
                   <button
                     type="button"
                     className="rounded-pill btn-home-register-loinpage"
