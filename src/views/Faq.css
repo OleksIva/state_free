@@ -1,0 +1,83 @@
+.faq-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  min-height: calc(100vh - 100px); /* Adjust the height to consider header and footer */
+  background-color: #f4f4f4;
+  padding: 20px; /* Add padding to avoid content touching the screen edges */
+  box-sizing: border-box;
+}
+
+/* Styling for the button */
+.knoto-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.knoto-button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the FAQ list */
+.faq-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Styling for each FAQ item */
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Styling for the FAQ question */
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+}
+
+/* Icon next to the FAQ question */
+.faq-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Answer section of the FAQ */
+.faq-answer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px; /* Rounded corners for the bottom */
+}
+
+/* Ensures the FAQ page content does not interfere with the header and footer */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  height: 50px; /* Example height for header and footer */
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
