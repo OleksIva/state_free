@@ -3,7 +3,6 @@ import StaatenlosigkeitItem from "./StaatenlosigkeitItem";
 import { faqs } from "../../config/Staatenlosigkeit";
 
 const StaatenlosigkeitList = ({ isVisible }) => {
-    console.log('FAQList isVisible:', isVisible);
     if (!isVisible) return null;
     
     return (

@@ -1,11 +1,8 @@
-
 import React, { useState } from "react";
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleOpen = () => setIsOpen(!isOpen);
-
   return (
     <div className="faq-item">
       <div className="faq-question" onClick={toggleOpen}>

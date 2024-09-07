@@ -3,7 +3,6 @@ import FAQItem from "./FAQItem";
 import { faqs } from "../../config/Faqs";
 
 const FAQList = ({ isVisible }) => {
-    console.log('FAQList isVisible:', isVisible);
     if (!isVisible) return null;
     
     return (
