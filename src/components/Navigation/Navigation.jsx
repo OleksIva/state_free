@@ -8,7 +8,7 @@ function Navigation({ user }) {
     }
 
     return (
-        <div>
+        <div className='pg-0'>
             <nav>
                 <img src="https://ik.imagekit.io/lnmtrplsk/image%201.png?updatedAt=1721816809003" alt="logo" />
 

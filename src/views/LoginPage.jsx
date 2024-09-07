@@ -8,12 +8,12 @@ import './LoginPage.css';
 const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
     setError(''); 
   };
 
@@ -26,136 +26,102 @@ const LoginPage = () => {
     event.preventDefault();
 
     try {
-      const response = await loginUser(username, password);
+      const response = await loginUser(email, password);
       dispatch(login(response));
       navigate('/profile');
     } catch (error) {
-      error = String(error).split('Error: ')
+      error = String(error).split('Error: ');
       console.error('Login failure:', error[1]);
       setError('Failed to login. ' + error[1] + '. Please try again.');
     }
   };
 
+  const handleForgotPassword = () => {
+    navigate('/forgot-password');
+  };
+
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={handleUsernameChange}
-          />
+    <div className='container login-page'>
+      <div>
+        <div className='row'>
+          <div className='col-md-12 d-flex justify-content-center'>
+            <p className='text-title-login'>Melden Sie sich bei Ihrem Konto an</p>
+          </div>
         </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </div>
-        {error && <div style={{ color: 'red' }}>{error}</div>}
-        <button type="submit">Login</button>
-      </form> 
+      
+        <form onSubmit={handleSubmit}>
+          <div className='row'>
+            <div className='col-md-12'>
+              <input
+                type="text"
+                value={email}
+                onChange={handleEmailChange}
+                className='input-email'
+                placeholder='E-Mail'
+              />
+              <i className="bi bi-envelope email-icon"></i>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-md-12'>
+              <input
+                type="password"
+                value={password}
+                onChange={handlePasswordChange}
+                className='input-password'
+                placeholder='Password'
+              />
+            </div>
+          </div>
+          <div className='row'>
+            <div className="form-check col-6">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck1"
+              />
+              <label className="text-checkbox" htmlFor="defaultCheck1">
+                Eingeloggt bleiben
+              </label>
+            </div>
+            <div className="col-6">
+              <p className="forgot-password" onClick={handleForgotPassword}>Passwort vergessen?</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="d-flex flex-column align-items-center justify-content-center">
+              <div className="w-50 col-12">
+                {error && <div style={{ color: 'red' }}>{error}</div>}
+                <button
+                  type="submit"
+                  className="btn-home-einlogen-login rounded-pill"
+                >
+                  Einloggen
+                </button>
+              </div>
+              <div className='row  d-flex flex-column g-0'>
+                <div className='col-12 g-0 d-flex justify-content-center align-items-center'>
+                  <div className='text-register-loinpage '>
+                    haben Sie noch kein Konto?
+                  </div>
+                </div>
+                <div className="col-12 g-0">
+                  <button
+                    type="button"
+                    className="rounded-pill btn-home-register-loinpage"
+                    onClick={() => navigate("/register")}
+                  >
+                    Registerieren
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default LoginPage;
-
-
-
-// import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { useNavigate } from 'react-router-dom';
-// import { registerUser } from '../Api/api';
-// import { login } from '../store/userSlice';
-
-// // import { test } from '../Api/api';
-
-// const LoginPage = () => {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const [username, setUsername] = useState('');
-//   const [password, setPassword] = useState('');
-//   const [error, setError] = useState('');
-
-//   const handleUsernameChange = (event) => {
-//     setUsername(event.target.value);
-//     setError(''); 
-//   };
-
-//   const handlePasswordChange = (event) => {
-//     setPassword(event.target.value);
-//     setError(''); 
-//   };
-
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-
-//     // // Reg expressions for login and password validation
-//     // const usernameRegex = /^[a-zA-Z0-9_-]{3,16}$/;
-//     // const passwordRegex = /^(?=.*[!@#$%^&*])(?=.{8,})/;
-
-//     // // Login validation
-//     // if (!usernameRegex.test(username)) {
-//     //   setError('Incorrect login. Username should contain 3-16 characters');
-//     //   return;
-//     // }
-
-//     // // Pwd validation
-//     // if (!passwordRegex.test(password)) {
-//     //   setError('Incorrect password. Should contain at least 8 characters and one of the following symbols: !@#$%^&*');
-//     //   return;
-//     // }
-
-//     try {
-//       const response = await registerUser('Alex', 'alex@gmail.com', '093575792443', '12345>ds')
-//       dispatch(login(response));
-//       navigate('/profile')
-      
-//       // TODO - 
-//       // if (response.ok) {
-//       //   // Success
-//       //   console.log('Data was succesfully sent to server');
-//       // } else {
-//       //   // Error
-//       //   console.error('Login failure:', response.statusText);
-//       //   setError('Failed to login. Please try again.');
-//       // }
-//     } catch (error) {
-//       console.error('Login failure:', error);
-//       setError('Failed to login. Please try again.');
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Login</h2>
-//       <form onSubmit={handleSubmit}>
-//         <div>
-//           <label>Username:</label>
-//           <input
-//             type="text"
-//             value={username}
-//             onChange={handleUsernameChange}
-//           />
-//         </div>
-//         <div>
-//           <label>Password:</label>
-//           <input
-//             type="password"
-//             value={password}
-//             onChange={handlePasswordChange}
-//           />
-//         </div>
-//         {error && <div style={{ color: 'white' }}>{error}</div>}
-//         <button type="submit">Login</button>
-//       </form> 
-//     </div>
-//   );
-// };
-
-// export default LoginPage;
