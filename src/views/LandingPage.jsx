@@ -39,12 +39,12 @@ function LandingPage() {
               <br />
               statelessness determination.
             </div>
-            <button
-              type="submit"
-              className="btn-home-register rounded-pill mt-4"
+            <Link
+              to="/assessment"
+              className="btn-home-register rounded-pill mt-4" 
             >
               Start your Application
-            </button>
+            </Link>
           </div>
         </div>
       </div>

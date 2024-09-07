@@ -9,7 +9,6 @@ function Content() {
       <div className="content-top">
         <h2>We’re here to Help you</h2>
         <p>Let's support you in applying for changing the status of their current status into the more favorable one.</p>
-        {/* {loggedIn && <button className="start-button"><Link className='registrieren-button' to="/assessment">Start Assessment</Link></button>} */}
         <button className="start-button"><Link className='registrieren-button' to="/assessment">Start Assessment</Link></button>
         <button><Link className='registrieren-button' to="/register">Registrieren</Link></button>
       </div>
