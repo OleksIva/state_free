@@ -1,0 +1,57 @@
+
+.Staatenlosigkeit-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .Staatenlosigkeit-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .Staatenlosigkeit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Staatenlosigkeit-list {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .Staatenlosigkeit-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .Staatenlosigkeit-question {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .Staatenlosigkeit-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .Staatenlosigkeit-answer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+  }

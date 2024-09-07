@@ -14,7 +14,7 @@ function Navigation({ user }) {
 
                 <ul>
                     <li><Link to="/">Startseite</Link></li>
-                    <li><Link to="/faq">FAQ</Link></li>
+                    <li><Link to="/faqpage">FAQ</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link className='anmeldenButton' to="/login">Anmelden</Link></li>
                     <li><Link className='registrierenButton' to="/register">Registrieren</Link></li>
