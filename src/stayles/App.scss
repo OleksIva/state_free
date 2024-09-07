@@ -1,0 +1,21 @@
+html, body {
+  overflow-x: hidden; 
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  text-align: left;
+}
