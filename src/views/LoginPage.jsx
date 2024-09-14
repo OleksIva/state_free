@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../Api/api';
-import { login } from '../store/userSlice';
-import './LoginPage.css';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { loginUser } from "../Api/api";
+import { login } from "../store/userSlice";
+import "./LoginPage.css";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-    setError(''); 
+    setError("");
   };
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-    setError(''); 
+    setError("");
   };
 
   const handleSubmit = async (event) => {
@@ -28,52 +28,54 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       dispatch(login(response));
-      navigate('/profile');
+      navigate("/");
     } catch (error) {
-      error = String(error).split('Error: ');
-      console.error('Login failure:', error[1]);
-      setError('Failed to login. ' + error[1] + '. Please try again.');
+      error = String(error).split("Error: ");
+      console.error("Login failure:", error[1]);
+      setError("Failed to login. " + error[1] + ". Please try again.");
     }
   };
 
   const handleForgotPassword = () => {
-    navigate('/forgot-password');
+    navigate("/forgot-password");
   };
 
   return (
-    <div className='container login-page'>
+    <div className="container login-page">
       <div>
-        <div className='row'>
-          <div className='col-md-12 d-flex justify-content-center'>
-            <p className='text-title-login'>Melden Sie sich bei Ihrem Konto an</p>
+        <div className="row">
+          <div className="col-md-12 d-flex justify-content-center">
+            <p className="text-title-login">
+              Melden Sie sich bei Ihrem Konto an
+            </p>
           </div>
         </div>
-      
+
         <form onSubmit={handleSubmit}>
-          <div className='row'>
-            <div className='col-md-12'>
+          <div className="row">
+            <div className="col-md-12">
               <input
                 type="text"
                 value={email}
                 onChange={handleEmailChange}
-                className='input-email'
-                placeholder='E-Mail'
+                className="input-email"
+                placeholder="E-Mail"
               />
               <i className="bi bi-envelope email-icon"></i>
             </div>
           </div>
-          <div className='row'>
-            <div className='col-md-12'>
+          <div className="row">
+            <div className="col-md-12">
               <input
                 type="password"
                 value={password}
                 onChange={handlePasswordChange}
-                className='input-password'
-                placeholder='Password'
+                className="input-password"
+                placeholder="Password"
               />
             </div>
           </div>
-          <div className='row'>
+          <div className="row">
             <div className="form-check col-6">
               <input
                 className="form-check-input"
@@ -86,13 +88,15 @@ const LoginPage = () => {
               </label>
             </div>
             <div className="col-6">
-              <p className="forgot-password" onClick={handleForgotPassword}>Passwort vergessen?</p>
+              <p className="forgot-password" onClick={handleForgotPassword}>
+                Passwort vergessen?
+              </p>
             </div>
           </div>
           <div className="row">
             <div className="d-flex flex-column align-items-center justify-content-center">
               <div className="w-50 col-12">
-                {error && <div style={{ color: 'red' }}>{error}</div>}
+                {error && <div style={{ color: "red" }}>{error}</div>}
                 <button
                   type="submit"
                   className="btn-home-einlogen-login rounded-pill"
@@ -100,9 +104,9 @@ const LoginPage = () => {
                   Einloggen
                 </button>
               </div>
-              <div className='row  d-flex flex-column g-0'>
-                <div className='col-12 g-0 d-flex justify-content-center align-items-center'>
-                  <div className='text-register-loinpage '>
+              <div className="row  d-flex flex-column g-0">
+                <div className="col-12 g-0 d-flex justify-content-center align-items-center">
+                  <div className="text-register-loinpage ">
                     haben Sie noch kein Konto?
                   </div>
                 </div>

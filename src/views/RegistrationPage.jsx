@@ -55,7 +55,7 @@ const RegistrationPage = () => {
             ort 
         );
         dispatch(login(response));
-        navigate("/profile");
+        navigate("/login");
     } catch (error) {
         const errorMessage = error.message || "Registration failed. Please try again.";
         console.error("Registration failure:", errorMessage);

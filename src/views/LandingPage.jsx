@@ -41,7 +41,7 @@ function LandingPage() {
             </div>
             <Link
               to="/assessment"
-              className="btn-home-register rounded-pill mt-4" 
+              className="btn-home-start-application rounded-pill mt-4 d-flex justify-content-center align-items-center" 
             >
               Start your Application
             </Link>
