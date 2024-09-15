@@ -14,6 +14,13 @@ const RegistrationPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [ort, setOrt] = useState("");
   const [error, setError] = useState("");
+  const [validationErrors, setValidationErrors] = useState({
+    username: false,
+    email: false,
+    password: false,
+    confirmPassword: false,
+    ort: false,
+  });
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -39,32 +46,79 @@ const RegistrationPage = () => {
     setConfirmPassword(event.target.value);
     setError("");
   };
-
+  const validatePassword = (password) => {
+    const errors = [];
+    
+    if (!/[A-Z]/.test(password)) {
+      errors.push("Password must contain at least one uppercase letter");
+    }
+    if (!/[a-z]/.test(password)) {
+      errors.push("Password must contain at least one lowercase letter");
+    }
+    if (!/[0-9]/.test(password)) {
+      errors.push("Password must contain at least one digit");
+    }
+    if (!/[@$!%*?&#]/.test(password)) {
+      errors.push("Password must contain at least one special character");
+    }
+    
+    return errors;
+  };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (password !== confirmPassword) {
-        setError("Passwords do not match. Please try again.");
-        return;
+  
+    let errors = {
+      username: !username,
+      email: !email,
+      password: !password,
+      confirmPassword: !confirmPassword,
+      ort: !ort,
+    };
+  
+    setValidationErrors(errors);
+  
+    if (Object.values(errors).some((error) => error)) {
+      setError("Please fill in all required fields.");
+      return;
     }
-
+  
+    if (password !== confirmPassword) {
+      setError("Passwords do not match. Please try again.");
+      return;
+    }
+  
+    const passwordErrors = validatePassword(password);
+    if (passwordErrors.length > 0) {
+      setError(passwordErrors.join(", "));
+      return;
+    }
+  
     try {
-        const response = await registerUser(
-            username,
-            email,
-            password,
-            ort 
-        );
-        dispatch(login(response));
-        navigate("/login");
+      const response = await registerUser(username, email, password, ort);
+      dispatch(login(response));
+      navigate("/login");
     } catch (error) {
-        const errorMessage = error.message || "Registration failed. Please try again.";
-        console.error("Registration failure:", errorMessage);
-        setError("Failed to register. " + errorMessage);
+      // Improved error handling
+      if (error.message) {
+        setError(error.message); // Display the error message
+      } else if (error.response) {
+        // Additional checks for errors from the server
+        const errorDetail = await error.response.json();
+        setError(errorDetail.detail || "An unknown error occurred.");
+      } else {
+        setError("An unknown error occurred.");
+      }
+      console.error("Registration failure:", error);
     }
   };
-
+  
+  
   return (
-    <div className="container registe-page sm-custom-text">
+    <div
+      className={`container registe-page sm-custom-text ${
+        error ? "error-bg" : ""
+      }`}
+    >
       <div className="row">
         <div className="row">
           <div className="col-12 header-titel justify-content-center align-items-center">
@@ -78,7 +132,9 @@ const RegistrationPage = () => {
             <div className="col-md-8">
               <input
                 type="text"
-                className="form-control input-field"
+                className={`form-control input-field ${
+                  validationErrors.username ? "input-error" : ""
+                }`}
                 value={username}
                 onChange={handleUsernameChange}
               />
@@ -89,7 +145,9 @@ const RegistrationPage = () => {
             <div className="col-md-8">
               <input
                 type="email"
-                className="form-control input-field"
+                className={`form-control input-field ${
+                  validationErrors.email ? "input-error" : ""
+                }`}
                 value={email}
                 onChange={handleEmailChange}
               />
@@ -100,7 +158,9 @@ const RegistrationPage = () => {
             <div className="col-md-8">
               <input
                 type="password"
-                className="form-control input-field"
+                className={`form-control input-field ${
+                  validationErrors.password ? "input-error" : ""
+                }`}
                 value={password}
                 onChange={handlePasswordChange}
               />
@@ -113,7 +173,9 @@ const RegistrationPage = () => {
             <div className="col-md-8">
               <input
                 type="password"
-                className="form-control input-field"
+                className={`form-control input-field ${
+                  validationErrors.confirmPassword ? "input-error" : ""
+                }`}
                 value={confirmPassword}
                 onChange={handleConfirmPasswordChange}
               />
@@ -124,50 +186,26 @@ const RegistrationPage = () => {
             <div className="col-md-8">
               <input
                 type="text"
-                className="form-control input-field"
+                className={`form-control input-field ${
+                  validationErrors.ort ? "input-error" : ""
+                }`}
                 value={ort}
                 onChange={handleOrtChange}
               />
             </div>
           </div>
-          {error && <div className="alert alert-danger">{error}</div>}
-          <div className="row">
-            <div className="col-12 checkbox-two pt-3">
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="defaultCheck1"
-                />
-                <label className="form-check-label text-checkbox" htmlFor="defaultCheck1">
-                  Please read and accept our data{" "}
-                  <span className="fw-bold text-decoration-underline">
-                    privacy policy.
-                  </span>
-                </label>
-              </div>
 
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="defaultCheck2"
-                />
-                <label className="form-check-label text-checkbox" htmlFor="defaultCheck2">
-                  Allow us to save your documents and information based on our data privacy.
-                </label>
-              </div>
+          {error && (
+            <div className="error-message">
+              <i className="fas fa-exclamation-circle"></i>
+              {error}
             </div>
-          </div>
+          )}
+
           <div className="row">
             <div className="col-12 d-flex flex-column align-items-end justify-content-center gap-3 py-3 total-buttun-form">
               <div className="mb-2 w-50">
-                <button
-                  type="submit"
-                  className="rounded-pill btn-home-register"
-                >
+                <button type="submit" className="rounded-pill btn-home-register">
                   Registerieren
                 </button>
               </div>
