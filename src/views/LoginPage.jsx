@@ -92,7 +92,12 @@ const LoginPage = () => {
         <div className="row">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <div className="w-50 col-12">
-              {error && <div style={{ color: "red" }}>{error}</div>}
+              {error && (
+                <div className="error-message">
+                  <i className="fas fa-exclamation-circle"></i>
+                  {error}
+                </div>
+              )}
               <button
                 type="submit"
                 className="btn-home-einlogen-login rounded-pill"
@@ -101,7 +106,7 @@ const LoginPage = () => {
               </button>
             </div>
             <div className="text-register-loinpage">
-              haben Sie noch kein Konto?
+              Haben Sie noch kein Konto?
             </div>
             <button
               type="button"
