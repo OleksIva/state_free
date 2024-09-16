@@ -46,6 +46,19 @@
   font-weight: 500 !important;
   font-size: 18px !important;
 }
+.btn-home-start-application{
+  background-color: #36d1b2;
+  color: white;
+  border: black;
+  height: 56px !important;
+  width: 254px !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  
+  
+
+}
 .btn-home-einlogen {
   background-color: #fff;
   color: white;

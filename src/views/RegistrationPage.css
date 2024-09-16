@@ -67,7 +67,7 @@
   height: 50px !important;
 }
 .text-checkbox {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   font-family: "Roboto", sans-serif;
 }
 
@@ -79,4 +79,91 @@
 }
 .checkbox-two {
   margin-left: 130px;
+}
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.error-message i {
+  font-size: 20px;
+  color: #721c24;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.error-message i {
+  font-size: 20px;
+  color: #721c24;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.error-bg {
+  background-color: #ffd4d4 !important;
+}
+
+.input-error {
+  border: 2px solid #dc3545 !important;
+}
+
+
+
+.registe-page {
+  background-color: #c2e3d8;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  padding-top: 60px;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  width: 800px !important;
+  height: 690px !important;
+}
+
+.header-titel {
+  font-size: 1.5rem;
 }
