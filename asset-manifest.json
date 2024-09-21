@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/state_free/static/css/main.eabbafb3.css",
+    "main.js": "/state_free/static/js/main.7f84d310.js",
+    "static/media/Passport illustration - portrait.jpg": "/state_free/static/media/Passport illustration - portrait.0d132ef505290605129a.jpg",
+    "static/media/Passport.jpg": "/state_free/static/media/Passport.e4191590af643afb0a11.jpg",
+    "static/media/Login_register.png": "/state_free/static/media/Login_register.96a9d758d74e7a1e93b8.png",
+    "static/media/Login_register illustration - poprtrait.jpg": "/state_free/static/media/Login_register illustration - poprtrait.27e5d83fa35e9811e5da.jpg",
+    "static/media/Question illustration - portrait.jpg": "/state_free/static/media/Question illustration - portrait.1747c296a9858f7dbed2.jpg",
+    "static/media/Paper plane.jpg": "/state_free/static/media/Paper plane.6c5b8eafba5a97065469.jpg",
+    "index.html": "/state_free/index.html",
+    "main.eabbafb3.css.map": "/state_free/static/css/main.eabbafb3.css.map",
+    "main.7f84d310.js.map": "/state_free/static/js/main.7f84d310.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eabbafb3.css",
+    "static/js/main.7f84d310.js"
+  ]
+}
