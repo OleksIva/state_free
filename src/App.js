@@ -10,7 +10,7 @@ import ResourcesPage from './views/ResourcesPage';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../src/stayles/App.scss';
+import './App.css';
 import TRANSPARENZ from './views/Transparenz';
 import Kontakt from './components/Kontakt/Kontakt';
 import FAQPage from './views/FAQPage';
