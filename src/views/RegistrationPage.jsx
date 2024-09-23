@@ -114,7 +114,7 @@ const RegistrationPage = () => {
 
   return (
     <div
-      className={`container registe-page ${error ? "error-bg" : ""}`}
+      className={`container registe-page  ${error ? "error-bg" : ""}` }
     >
       <div className="row">
         <div className="col-12 header-titel">

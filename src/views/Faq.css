@@ -1,80 +1,67 @@
 .faq-page {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-  min-height: calc(100vh - 100px); /* Adjust the height to consider header and footer */
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 6.25rem);
   background-color: #f4f4f4;
-  padding: 20px; /* Add padding to avoid content touching the screen edges */
+  padding: 1.25rem;
   box-sizing: border-box;
 }
 
-/* Styling for the button */
 .knoto-button {
-  padding: 10px 20px;
-  font-size: 20px;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.25rem;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .knoto-button:hover {
   background-color: #0056b3;
 }
 
-/* Container for the FAQ list */
 .faq-list {
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 
-/* Styling for each FAQ item */
 .faq-item {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
+  margin-bottom: 0.9375rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
   background-color: #fff;
 }
 
-/* Styling for the FAQ question */
 .faq-question {
   cursor: pointer;
   font-weight: bold;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 0.625rem;
   background-color: #f9f9f9;
-  border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+  border-radius: 0.3125rem 0.3125rem 0 0;
 }
 
-/* Icon next to the FAQ question */
 .faq-icon {
-  margin-right: 10px;
-  font-size: 20px;
+  margin-right: 0.625rem;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
-/* Answer section of the FAQ */
 .faq-answer {
-  padding: 10px;
-  border-top: 1px solid #ddd;
+  padding: 0.625rem;
+  border-top: 0.0625rem solid #ddd;
   background-color: #fff;
-  border-radius: 0 0 5px 5px; /* Rounded corners for the bottom */
-}
-
-/* Ensures the FAQ page content does not interfere with the header and footer */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  border-radius: 0 0 0.3125rem 0.3125rem;
 }
 
 header, footer {
-  height: 50px; /* Example height for header and footer */
+  height: 3.125rem;
   background-color: #333;
   color: white;
   display: flex;
