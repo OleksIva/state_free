@@ -5,11 +5,11 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
-  height: 250px;
+  height: 15.625rem; /* 250px / 16 */
   width: 100vw;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px / 16 */
 }
 
 .footer-left {
@@ -42,12 +42,12 @@ footer ul {
 }
 
 footer ul li {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px / 16 */
 }
 
 footer ul li a {
   text-align: center;
   text-decoration: none;
-  padding: 15px;
+  padding: 0.9375rem; /* 15px / 16 */
   color: #FFFFFF;
 }

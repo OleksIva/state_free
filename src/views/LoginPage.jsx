@@ -40,7 +40,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="container login-page">
+    <div className="container login-page-neu  ">
       <div className="row">
         <div className="col-md-12 d-flex justify-content-center">
           <p className="text-title-login">Melden Sie sich bei Ihrem Konto an</p>

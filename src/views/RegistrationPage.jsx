@@ -46,6 +46,7 @@ const RegistrationPage = () => {
     setConfirmPassword(event.target.value);
     setError("");
   };
+
   const validatePassword = (password) => {
     const errors = [];
     
@@ -64,9 +65,10 @@ const RegistrationPage = () => {
     
     return errors;
   };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     let errors = {
       username: !username,
       email: !email,
@@ -74,35 +76,33 @@ const RegistrationPage = () => {
       confirmPassword: !confirmPassword,
       ort: !ort,
     };
-  
+
     setValidationErrors(errors);
-  
+
     if (Object.values(errors).some((error) => error)) {
       setError("Please fill in all required fields.");
       return;
     }
-  
+
     if (password !== confirmPassword) {
       setError("Passwords do not match. Please try again.");
       return;
     }
-  
+
     const passwordErrors = validatePassword(password);
     if (passwordErrors.length > 0) {
       setError(passwordErrors.join(", "));
       return;
     }
-  
+
     try {
       const response = await registerUser(username, email, password, ort);
       dispatch(login(response));
       navigate("/login");
     } catch (error) {
-      // Improved error handling
       if (error.message) {
-        setError(error.message); // Display the error message
+        setError(error.message);
       } else if (error.response) {
-        // Additional checks for errors from the server
         const errorDetail = await error.response.json();
         setError(errorDetail.detail || "An unknown error occurred.");
       } else {
@@ -111,117 +111,111 @@ const RegistrationPage = () => {
       console.error("Registration failure:", error);
     }
   };
-  
-  
+
   return (
     <div
-      className={`container registe-page sm-custom-text ${
-        error ? "error-bg" : ""
-      }`}
+      className={`container registe-page  ${error ? "error-bg" : ""}` }
     >
       <div className="row">
-        <div className="row">
-          <div className="col-12 header-titel justify-content-center align-items-center">
-            Enter your information to register
+        <div className="col-12 header-titel">
+          Registrieren Sie sich hier
+        </div>
+      </div>
+
+      <form onSubmit={handleSubmit}>
+        <div className="form-group row mb-3">
+          <label className="col-md-4 input-label">Benutzername</label>
+          <div className="col-md-8">
+            <input
+              type="text"
+              className={`form-control input-field ${
+                validationErrors.username ? "input-error" : ""
+              }`}
+              value={username}
+              onChange={handleUsernameChange}
+              placeholder="Benutzername"
+            />
+          </div>
+        </div>
+        <div className="form-group row mb-3">
+          <label className="col-md-4 input-label">E-Mail</label>
+          <div className="col-md-8">
+            <input
+              type="email"
+              className={`form-control input-field ${
+                validationErrors.email ? "input-error" : ""
+              }`}
+              value={email}
+              onChange={handleEmailChange}
+              placeholder="E-Mail"
+            />
+          </div>
+        </div>
+        <div className="form-group row mb-3">
+          <label className="col-md-4 input-label">Kennwort</label>
+          <div className="col-md-8">
+            <input
+              type="password"
+              className={`form-control input-field ${
+                validationErrors.password ? "input-error" : ""
+              }`}
+              value={password}
+              onChange={handlePasswordChange}
+              placeholder="Kennwort"
+            />
+          </div>
+        </div>
+        <div className="form-group row mb-3">
+          <label className="col-md-4 input-label">Kennwort wiederholen</label>
+          <div className="col-md-8">
+            <input
+              type="password"
+              className={`form-control input-field ${
+                validationErrors.confirmPassword ? "input-error" : ""
+              }`}
+              value={confirmPassword}
+              onChange={handleConfirmPasswordChange}
+              placeholder="Kennwort wiederholen"
+            />
+          </div>
+        </div>
+        <div className="form-group row mb-3">
+          <label className="col-md-4 input-label">Ort</label>
+          <div className="col-md-8">
+            <input
+              type="text"
+              className={`form-control input-field ${
+                validationErrors.ort ? "input-error" : ""
+              }`}
+              value={ort}
+              onChange={handleOrtChange}
+              placeholder="Ort"
+            />
           </div>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className="form-group row mb-3">
-            <label className="col-md-4 input-label">Benutzername</label>
-            <div className="col-md-8">
-              <input
-                type="text"
-                className={`form-control input-field ${
-                  validationErrors.username ? "input-error" : ""
-                }`}
-                value={username}
-                onChange={handleUsernameChange}
-              />
-            </div>
+        {error && (
+          <div className="error-message">
+            <i className="fas fa-exclamation-circle"></i>
+            {error}
           </div>
-          <div className="form-group row mb-3">
-            <label className="col-md-4 col-form-label input-label">E-Mail</label>
-            <div className="col-md-8">
-              <input
-                type="email"
-                className={`form-control input-field ${
-                  validationErrors.email ? "input-error" : ""
-                }`}
-                value={email}
-                onChange={handleEmailChange}
-              />
-            </div>
-          </div>
-          <div className="form-group row mb-3">
-            <label className="col-md-4 col-form-label input-label">Kennwort</label>
-            <div className="col-md-8">
-              <input
-                type="password"
-                className={`form-control input-field ${
-                  validationErrors.password ? "input-error" : ""
-                }`}
-                value={password}
-                onChange={handlePasswordChange}
-              />
-            </div>
-          </div>
-          <div className="form-group row">
-            <label className="col-md-4 col-form-label input-label mb-3">
-              Kennwort Wiederholen
-            </label>
-            <div className="col-md-8">
-              <input
-                type="password"
-                className={`form-control input-field ${
-                  validationErrors.confirmPassword ? "input-error" : ""
-                }`}
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
-              />
-            </div>
-          </div>
-          <div className="form-group row mb-3">
-            <label className="col-md-4 col-form-label input-label">Ort</label>
-            <div className="col-md-8">
-              <input
-                type="text"
-                className={`form-control input-field ${
-                  validationErrors.ort ? "input-error" : ""
-                }`}
-                value={ort}
-                onChange={handleOrtChange}
-              />
-            </div>
-          </div>
+        )}
 
-          {error && (
-            <div className="error-message">
-              <i className="fas fa-exclamation-circle"></i>
-              {error}
-            </div>
-          )}
-
-          <div className="row">
-            <div className="col-12 d-flex flex-column align-items-end justify-content-center gap-3 py-3 total-buttun-form">
-              <div className="mb-2 w-50">
-                <button type="submit" className="rounded-pill btn-home-register">
-                  Registerieren
-                </button>
-              </div>
-              <div className="w-50 col-12">
-                <button
-                  type="button"
-                  className="btn-home-einlogen rounded-pill"
-                  onClick={() => navigate("/login")}
-                >
-                  Einloggen
-                </button>
-              </div>
-            </div>
+        <div className="row">
+          <div className="col-12 d-flex flex-column align-items-end justify-content-center gap-3 py-3 total-buttun-form">
+            <button type="submit" className="rounded-pill btn-home-register">
+              Registrieren
+            </button>
+            <button
+              type="button"
+              className="btn-home-einlogen rounded-pill"
+              onClick={() => navigate("/login")}
+            >
+              Einloggen
+            </button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 };

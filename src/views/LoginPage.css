@@ -1,28 +1,30 @@
-.login-page {
-  width: 592px !important;
-  height: 502px !important;
+.login-page-neu {
+  width: 37rem !important; 
+  height: 31.375rem; 
   background-color: #c2e3d8;
-  margin-top: 120px !important;
+  margin-top: 7.5rem; 
+  margin-bottom: 7.5rem; 
+  overflow: hidden; 
 }
 
 .text-title-login {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem; 
   font-weight: 700;
-  margin-top: 40px !important;
+  margin-top: 2.5rem !important; 
   text-align: center;
 }
 
 .input-email,
 .input-password {
-  width: 502px;
-  height: 45px;
+  width: 31.375rem; 
+  height: 2.8125rem; 
   background-color: #ffffff;
   border: 1px solid #ccc;
-  margin-bottom: 15px;
-  margin-left: 40px;
-  padding-left: 15px; 
-  font-size: 16px;
+  margin-bottom: 0.9375rem; 
+  margin-left: 2.5rem;
+  padding-left: 0.9375rem; 
+  font-size: 1rem;
   color: #333;
 }
 
@@ -33,80 +35,80 @@
 }
 
 .text-checkbox {
-  font-size: 16px;
+  font-size: 1rem; 
   font-weight: 400;
   font-family: "Roboto", sans-serif;
-  margin-top: 10px !important;
+  margin-top: 0.625rem !important; 
 }
 
 .form-check-input {
-  width: 1.5em !important;
-  height: 1.5em !important;
+  width: 1.5rem !important; 
+  height: 1.5rem !important;
   transform: scale(1.5);
-  margin-right: 20px !important;
-  margin-left: 35px !important;
-  margin-top: 10px !important;
+  margin-right: 1.25rem !important; 
+  margin-left: 2.1875rem !important; 
+  margin-top: 0.625rem !important; 
 }
 
 .btn-home-einlogen-login {
   color: #000;
   border-color: #36d1b2;
   background-color: #fff;
-  height: 56px;
-  width: 254px;
+  height: 3.5rem; 
+  width: 15.875rem; 
   font-weight: 500 !important;
-  font-size: 18px !important;
+  font-size: 1.125rem !important; 
   font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 60px;
+  margin-top: 1.25rem;
+  margin-bottom: 3.75rem; 
 }
 
 .text-register-loinpage {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; 
 }
 
 .btn-home-register-loinpage {
   background-color: #36d1b2;
   color: white;
-  height: 56px;
-  width: 254px;
+  height: 3.5rem;
+  width: 15.875rem; 
   font-weight: 500 !important;
-  font-size: 18px !important;
+  font-size: 1.125rem !important; 
 }
 
 .forgot-password {
   color: black;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   display: flex;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-right: 1.875rem; 
 }
 
 .error-message {
-  background-color: #f8d7da; 
-  color: #721c24; 
-  border: 1px solid #f5c6cb; 
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 15px; 
-  width: 100%; 
-  text-align: center; 
-  font-size: 16px; 
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.25rem;
+  padding: 0.625rem;
+  margin-bottom: 0.9375rem; 
+  width: 100%;
+  text-align: center;
+  font-size: 1rem; 
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
 }
 
 .error-message i {
-  margin-right: 8px; 
+  margin-right: 0.5rem; 
 }
