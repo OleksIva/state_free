@@ -20,6 +20,9 @@
   padding-bottom: 1.25rem; 
   display: flex;
   padding-left: 9rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-home-einlogen {

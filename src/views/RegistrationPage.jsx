@@ -118,7 +118,7 @@ const RegistrationPage = () => {
     >
       <div className="row">
         <div className="col-12 header-titel">
-          Registrieren Sie sich hier
+        Enter your information to register
         </div>
       </div>
 
@@ -193,6 +193,7 @@ const RegistrationPage = () => {
             />
           </div>
         </div>
+        
 
         {error && (
           <div className="error-message">
