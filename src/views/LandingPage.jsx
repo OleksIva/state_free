@@ -17,7 +17,7 @@ function LandingPage() {
         <div className="row landing-page-above">
           <div className="col-md-4 d-flex align-items-center justify-content-center g-0 ">
             <div className="d-flex flex-column text-above">
-              <p className="mb-0">STATEFERR</p>
+              <p className="mb-0">STATEFREE</p>
               <p className="mb-0">CASE</p>
               <p className="mb-0">ASSISTANT</p>
             </div>
@@ -33,17 +33,17 @@ function LandingPage() {
 
           <div className="col-md-4 d-flex flex-column align-items-center justify-content-center p-4 text-left-above ">
             <div>
-              A comprehensive tool to guide
+              Ein umfassendes Tool, das Sie
               <br />
-              you through the process of
+              durch den Prozess der Feststellung
               <br />
-              statelessness determination.
+              der Staatenlosigkeit führt.
             </div>
             <Link
               to="/assessment/step1"
               className="btn-home-start-application rounded-pill mt-4 d-flex justify-content-center align-items-center"
             >
-              Start your Application
+              Antrag einreichen
             </Link>
           </div>
         </div>
@@ -56,10 +56,10 @@ function LandingPage() {
             alt="Passport Illustration"
           />
         </div>
-        <div className="col-md-6 digital-case">
+        <div className="col-md-6 digital-case d-flex align-items-center justify-content-center">
           <div className="row ">
             <div className="col-12 mb-5">
-              <h1 className="mb-5">YOUR DIGITAL CASE</h1>
+              <h1 className="mb-5">IHR DIGITALER FALL</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
                 magnam, voluptas aliquam veniam asperiores praesentium corrupti,
@@ -95,7 +95,7 @@ function LandingPage() {
       </div>
       <div className="row">
         <div className="col-md-12 home-tranzpranz">
-          <h1 className="pb-3 ">TRANSPARENCY</h1>
+          <h1 className="pb-3 ">TRANSPARENZ</h1>
           <p className="text-tranzpranz">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
             molestias dignissimos animi reprehenderit sapiente dolorum fugiat,
@@ -110,7 +110,7 @@ function LandingPage() {
               to="/transparenz"
               className=" btn-home-tranzpranz-readme  rounded-pill "
             >
-              Read more
+              Mehr erfahren
             </Link>
           </div>
         </div>
@@ -125,7 +125,7 @@ function LandingPage() {
             />
           </div>
           <p className="text-portrait py-2 d-flex justify-content-center mt-0">
-            Step 1: Collect documents
+          Schritt 1: Dokumente sammeln
           </p>
         </div>
         <div className="col-md-4 my-5 d-flex flex-column align-items-center justify-content-end g-0">
@@ -136,7 +136,7 @@ function LandingPage() {
           />
 
           <p className="text-portrait text-center py-2  mt-0">
-            Step 2: Create an acccount
+          Schritt 2: Konto erstellen
           </p>
         </div>
         <div className="col-md-4 my-5 g-0">
@@ -148,7 +148,7 @@ function LandingPage() {
             />
           </div>
           <p className="text-portrait text-center py-2 mt-0">
-            Step 3: Fill out the questionary
+          Schritt 3: Fragebogen ausfüllen
           </p>
         </div>
       </div>
