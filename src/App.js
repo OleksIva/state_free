@@ -16,6 +16,7 @@ import Kontakt from './components/Kontakt/Kontakt';
 import FAQPage from './views/FAQPage';
 import ProtecteRoute from './components/protecteRoute';
 import { Authprovider } from './context/AuthoContext';
+import AboutUS from './views/AboutUs';
 
 function App() {
   const [user, setUser] = useState(true);
@@ -36,7 +37,7 @@ function App() {
             <AssessmentPage />
             </ProtecteRoute>} />
           <Route path="/blog" element={<div>Blog Page</div>} />
-          <Route path="/about" element={<div>About Us Page</div>} />
+          <Route path="/about" element={<AboutUS />} />
           <Route path="/register" element={<RegistrationPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/transparenz" element={<TRANSPARENZ />} />

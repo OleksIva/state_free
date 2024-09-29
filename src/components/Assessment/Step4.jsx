@@ -76,7 +76,7 @@ const Step4 = () => {
 
       <div className="row gy-4">
         <div className="col-md-12">
-          <label className="form-label">Aufenthaltstitel hochladen (PDF, до 5 MB):</label>
+          <label className="form-label">Aufenthaltstitel hochladen (PDF, bis 5 MB):</label>
           <input
             type="file"
             className="form-control"
@@ -86,7 +86,7 @@ const Step4 = () => {
         </div>
 
         <div className="col-md-12">
-          <label className="form-label">Geburtsurkunde hochladen (PDF, до 5 MB):</label>
+          <label className="form-label">Geburtsurkunde hochladen (PDF, bis 5 MB):</label>
           <input
             type="file"
             className="form-control"
