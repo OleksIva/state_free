@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom"; 
 import { useDispatch, useSelector } from "react-redux";
 import { updateDetails, selectDetails } from "../../store/userSlice";
-import './assessment.css';
 
 const Step1 = () => {
   const dispatch = useDispatch();
@@ -19,143 +18,79 @@ const Step1 = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="assessment-form__container">
-      <h2>Step 1</h2>
-      <div className="assessment-form__inputs">
-      
-      <label>
-        Anrede:
-        <select {...register("salutation", { required: "This is required." })}>
-          <option value="">Bitte auswählen</option>
-          <option value="Herr">Herr</option>
-          <option value="Frau">Frau</option>
-          <option value="Dr">Dr</option>
-          <option value="ohne Anrede">ohne Anrede</option>
-        </select>
-        {errors.salutation && <p>{errors.salutation.message}</p>}
-      </label>
-      
-      <label>
-        Titel (optional):
-        <input
-          {...register("title")}
-        />
-      </label>
+    <form onSubmit={handleSubmit(onSubmit)} className="container mt-5 p-4 border rounded shadow mbcont">
+      <h2 className="mb-4">Schritt 1</h2>
+      <div className="row gy-4">
+        <div className="col-md-6">
+          <label className="form-label">Anrede:</label>
+          <select className="form-select" {...register("salutation", { required: "Dieses Feld muss ausgefüllt werden." })}>
+            <option value="">Bitte auswählen</option>
+            <option value="Herr">Herr</option>
+            <option value="Frau">Frau</option>
+            <option value="Dr">Dr</option>
+            <option value="ohne Anrede">ohne Anrede</option>
+          </select>
+          {errors.salutation && <p className="text-danger">{errors.salutation.message}</p>}
+        </div>
 
-      <label>
-        Vorname/n:
-        <input
-          {...register("firstName", { required: "This is required." })}
-        />
-        {errors.firstName && <p>{errors.firstName.message}</p>}
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Titel (optional):</label>
+          <input className="form-control" {...register("title")} />
+        </div>
 
-      <label>
-        Nachname:
-        <input
-          {...register("lastName", { required: "This is required." })}
-        />
-        {errors.lastName && <p>{errors.lastName.message}</p>}
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Vorname/n:</label>
+          <input className="form-control" {...register("firstName", { required: "Dieses Feld muss ausgefüllt werden." })} />
+          {errors.firstName && <p className="text-danger">{errors.firstName.message}</p>}
+        </div>
 
-      <label>
-        Andere Name/n:
-        <input
-          {...register("otherNames")}
-        />
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Nachname:</label>
+          <input className="form-control" {...register("lastName", { required: "Dieses Feld muss ausgefüllt werden." })} />
+          {errors.lastName && <p className="text-danger">{errors.lastName.message}</p>}
+        </div>
 
-      <label>
-        Ausweiss-oder Aufenthaltsdokument:
-        <input
-          {...register("documentType", { required: "This is required." })}
-        />
-        {errors.documentType && <p>{errors.documentType.message}</p>}
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Andere Name/n:</label>
+          <input className="form-control" {...register("otherNames")} />
+        </div>
 
-      <label>
-        Nummer des Dokuments:
-        <input
-          {...register("documentNumber", { required: "This is required." })}
-        />
-        {errors.documentNumber && <p>{errors.documentNumber.message}</p>}
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Ausweiss-oder Aufenthaltsdokument:</label>
+          <input className="form-control" {...register("documentType", { required: "Dieses Feld muss ausgefüllt werden." })} />
+          {errors.documentType && <p className="text-danger">{errors.documentType.message}</p>}
+        </div>
 
-      <label>
-        Welche Staatsgehörigkeit steht in deinen Dokumenten:
-        <input
-          {...register("nationality", { required: "This is required." })}
-        />
-        {errors.nationality && <p>{errors.nationality.message}</p>}
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Nummer des Dokuments:</label>
+          <input className="form-control" {...register("documentNumber", { required: "Dieses Feld muss ausgefüllt werden." })} />
+          {errors.documentNumber && <p className="text-danger">{errors.documentNumber.message}</p>}
+        </div>
 
-      <label>
-        Ethnische Zugehörigkeit:
-        <input
-          {...register("ethnicity")}
-        />
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Welche Staatsgehörigkeit steht in deinen Dokumenten:</label>
+          <input className="form-control" {...register("nationality", { required: "Dieses Feld muss ausgefüllt werden." })} />
+          {errors.nationality && <p className="text-danger">{errors.nationality.message}</p>}
+        </div>
 
-      <label>
-        Religion:
-        <input
-          {...register("religion")}
-        />
-      </label>
+        <div className="col-md-6">
+          <label className="form-label">Ethnische Zugehörigkeit:</label>
+          <input className="form-control" {...register("ethnicity")} />
+        </div>
 
+        <div className="col-md-6">
+          <label className="form-label">Religion:</label>
+          <input className="form-control" {...register("religion")} />
+        </div>
       </div>
-      <input type="submit" />
+      
+      <div className="d-flex justify-content-between mt-4">
+        <button type="button" className="btn btn-outline-secondary">Für später speichern</button>
+        <button type="submit" className="btn btn-success">Weiter</button>
+      </div>
     </form>
   );
 };
 
 export default Step1;
 
-
-
-
-
-// import React from "react";
-// import { useForm } from "react-hook-form";
-// import { useNavigate } from "react-router-dom"; 
-// import { useDispatch, useSelector } from "react-redux";
-// import { updateDetails, selectDetails } from "../../store/userSlice";
-
-// const Step1 = () => {
-//   const dispatch = useDispatch();
-//   const details = useSelector(selectDetails);
-//   const navigate = useNavigate(); 
-//   const { handleSubmit, register, formState: { errors } } = useForm({
-//     defaultValues: details
-//   });
-
-//   const onSubmit = (data) => {
-//     dispatch(updateDetails(data));
-//     navigate("/assessment/step2"); 
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)} className="assessment-form__container">
-//       <h2>Step 1</h2>
-//       <div className="assessment-form__inputs">
-//       <label>
-//         Vorname:
-//         <input
-//           {...register("firstName", { required: "This is required." })}
-//         />
-//         {errors.firstName && <p>{errors.firstName.message}</p>}
-//       </label>
-//       <label>
-//         Nachname:
-//         <input
-//           {...register("lastName", { required: "This is required." })}
-//         />
-//         {errors.lastName && <p>{errors.lastName.message}</p>}
-//       </label>
-//       </div>
-//       <input type="submit" />
-//     </form>
-//   );
-// };
-
-// export default Step1;
