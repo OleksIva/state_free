@@ -40,7 +40,7 @@ function LandingPage() {
               statelessness determination.
             </div>
             <Link
-              to="/assessment"
+              to="/assessment/step1"
               className="btn-home-start-application rounded-pill mt-4 d-flex justify-content-center align-items-center"
             >
               Start your Application
