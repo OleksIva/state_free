@@ -12,7 +12,7 @@ const FAQPage = () => {
   
   return (
     <div className="faq-page">
-       <h1>faq</h1>
+       <h1>FAQ</h1>
       <FaqsButton onClick={() => setShowFAQs(prev =>  !prev)} />
       <div style={{ border: '1px solid red' }}>
         <FAQList isVisible={showFAQs} />
