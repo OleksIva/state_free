@@ -71,7 +71,7 @@ const Step4 = () => {
   };
 
   return (
-    <div className="container mt-5 p-4 border rounded shadow">
+    <div className="container mt-5 p-4 border rounded shadow mbcont">
       <h2 className="mb-4">Schritt 4</h2>
 
       <div className="row gy-4">
