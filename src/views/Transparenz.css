@@ -1,13 +1,13 @@
-.text-body{
-    font-size: 20px !important;
+.text-body {
+    font-size: 1.25rem !important; 
     font-weight: 500;
     color: #000000;
     font-family: "Roboto", sans-serif;
-    margin-top: 20px;
-   
+    margin-top: 1.25rem; 
 }
-.titel{
-    font-size: 50px;
+
+.titel {
+    font-size: 3.125rem; 
     font-weight: 620;
     color: #000000;
 }

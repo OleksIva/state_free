@@ -15,7 +15,7 @@ function Footer() {
       <div className="footer-right">
         <div className='right-content'>
           <ul>
-            <li><Link to="about">About</Link></li>
+            <li><Link to="about">Über uns</Link></li>
             <li><Link to="/faq">FAQ</Link></li>
             <li><Link>Community</Link></li>
             <li><Link to="/contact">Kontakt</Link></li>

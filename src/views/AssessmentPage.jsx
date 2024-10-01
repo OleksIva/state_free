@@ -11,7 +11,6 @@ import Step1 from "../components/Assessment/Step1";
 import Step2 from "../components/Assessment/Step2";
 import Step3 from "../components/Assessment/Step3";
 import Step4 from "../components/Assessment/Step4";
-import Step5 from "../components/Assessment/Step5";
 import Result from "../components/Assessment/Result";
 import "./AssessmentPage.css";
 
@@ -19,34 +18,37 @@ const AssessmentPage = () => {
   const location = useLocation();
   return (
     <>
-      <div className="assessment-page">
-        <ul className="assessment-page__steps">
-          <li className={location.pathname === "/assessment/step1" ? "active" : ""}>
-            <Link to="step1">1. Persönliche Daten</Link>
-          </li>
-          <li className={location.pathname === "/assessment/step2" ? "active" : ""}>
-            <Link to="step2">2. Geburtsort</Link>
-          </li>
-          <li className={location.pathname === "/assessment/step3" ? "active" : ""}>
-            <Link to="step3">3. Staatsangehörigkeit</Link>
-          </li>
-          <li className={location.pathname === "/assessment/step4" ? "active" : ""}>
-            <Link to="step4">4. Angehörige</Link>
-          </li>
-          <li className={location.pathname === "/assessment/step5" ? "active" : ""}>
-            <Link to="step5">5. Dokumente</Link>
-          </li>
-          <li className={location.pathname === "/assessment/result" ? "active" : ""}>
-            <Link to="result">Download</Link>
-          </li>
-        </ul>
+<div className="assessment-page">
+      <div className="wizard">
+        <div className="wizard-steps d-flex justify-content-between align-items-center position-relative mb-4">
+          <div className={`step ${location.pathname === "/assessment/step1" ? "active" : ""}`}>
+            <Link to="/assessment/step1" className="btn btn-circle">1</Link>
+            <p>Persönliche Daten</p>
+          </div>
+          <div className={`step ${location.pathname === "/assessment/step2" ? "active" : ""}`}>
+            <Link to="/assessment/step2" className="btn btn-circle">2</Link>
+            <p>Geburtsort</p>
+          </div>
+          <div className={`step ${location.pathname === "/assessment/step3" ? "active" : ""}`}>
+            <Link to="/assessment/step3" className="btn btn-circle">3</Link>
+            <p>Staatsangehörigkeit</p>
+          </div>
+          <div className={`step ${location.pathname === "/assessment/step4" ? "active" : ""}`}>
+            <Link to="/assessment/step4" className="btn btn-circle">4</Link>
+            <p>Angehörige</p>
+          </div>
+          <div className={`step ${location.pathname === "/assessment/result" ? "active" : ""}`}>
+            <Link to="/assessment/result" className="btn btn-circle">5</Link>
+            <p>Zusammenfassung</p>
+          </div>
+        </div>
+      </div>
       </div>
       <Routes>
         <Route path="step1" element={<Step1 />} />
         <Route path="step2" element={<Step2 />} />
         <Route path="step3" element={<Step3 />} />
         <Route path="step4" element={<Step4 />} />
-        <Route path="step5" element={<Step5 />} />
         <Route path="result" element={<Result />} />
       </Routes>
     </>

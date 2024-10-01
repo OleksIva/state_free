@@ -1,59 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-.assessment-page {
-    width: 80%;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
+/* Custom radio button styles */
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #5cb85c; 
+  }
+  
+  .custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); 
+  }
+  
+  .custom-radio .custom-control-input ~ .custom-control-label::before {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  
+  .custom-radio .custom-control-input {
+    margin-top: 0.2rem; 
+  }
+  
+  .custom-radio .custom-control-label {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+  
 
-}
+  
 
 
-.assessment-page__steps {
-    list-style-type: none;
+  .wizard {
+    margin-top: 30px;
+    padding: 0 50px; 
+  }
+  
+  .wizard-steps {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    position: relative;
+    width: 80%; 
+    margin: 0 auto;
+  }
+  
+  .wizard-steps:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: calc(50px + 20px); 
+    right: calc(50px + 20px); 
+    height: 2px;
+    background-color: #ccc;
+    z-index: -1; 
+  }
+  
+  .wizard-steps .step {
+    position: relative;
+    text-align: center;
+  }
+  
+  .wizard-steps .step p {
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  .wizard-steps .step .btn-circle {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+  }
+  
+  .wizard-steps .step.active .btn-circle {
+    background-color: #0cb12d; 
+    color: white;
+  }
+  
+  .wizard-steps .step.disabled .btn-circle {
+    background-color: #eee;
+    color: #bbb;
+  }
+  
 
-}
-
-.assessment-page__steps li a {
-    text-decoration: none;
-    background: rgb(209, 209, 209);
-    padding: 10px 20px;
-    border-radius: 30px;
-}
-
-
-.form-container {
-    /* display: flex; */
-    justify-content: center;
-    
-}
-
-.assessment-form__container {
-margin: 0 auto;
-width: max-content;
-}
-
-.assessment-form__container label {
-    display: flex;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    flex-direction: column;
-    }
-
-.assessment-form__container label input {
-    /* width: 736px; */
-    /* height: 45px; */
-    /* margin: 10px 0; */
-}
-
-.assessment-form__inputs {
-    display: flex;
-    flex-flow: column;
-}
-
+  .mbcont {
+    margin-bottom: 50px;
+  }

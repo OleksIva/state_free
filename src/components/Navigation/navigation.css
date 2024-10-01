@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .container-fluid {
   padding: 0;
   margin: 0;
 }
+
 nav {
   background-color: #C2E3D8;
-  height: 80px;
+  height: 5rem; 
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.9375rem; 
   font-style: bold;
- 
 }
 
 nav ul {
@@ -28,29 +29,28 @@ nav ul {
 
 nav ul li {
   float: left;
-  padding: 0 5px;
+  padding: 0 0.3125rem; 
 }
 
 nav ul li a {
   display: block;
   text-align: center;
-  padding: 14px 16px;
-  /* Padding around menu items */
+  padding: 0.875rem 1rem; 
   text-decoration: none;
   color: #000000;
 }
 
 .anmeldenButton {
-  border-radius: 60px;
+  border-radius: 3.75rem; 
   background-color: #FFFFFF;
-  width: 120px;
+  width: 7.5rem; 
   text-align: center;
 }
 
 .registrierenButton {
-  border-radius: 60px;
+  border-radius: 3.75rem; 
   background-color: #FFFF67;
-  width: 120px;
+  width: 7.5rem; 
   text-align: center;
 }
 

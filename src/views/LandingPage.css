@@ -1,151 +1,171 @@
 .landing-page-above {
-  width: 100%;
-  height: 574px;
+  width: 100vw;
+  height: 35.875rem;
   background-color: #c2e3d8;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: black;
   padding: 0;
   margin: 0;
 }
+
 .text-above {
-  font-size: 53px;
+  font-size: 3.3125rem;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   color: black;
-  margin-right: 40px;
-  
+  margin-right: 2.5rem;
 }
+
 .text-left-above {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
 }
+
 .passbort-img {
-  width: 420px;
-  height: 420px;
-
-  margin-top: 90px;
-  margin-bottom: 90px;
+  width: 26.25rem;
+  height: 26.25rem;
+  margin-top: 5.625rem;
+  margin-bottom: 5.625rem;
 }
-.login-register-illustration {
-  width: 420px;
-  height: 420px;
 
-  margin-top: 90px;
-  margin-bottom: 90px;
-  margin-left: 180px;
+.login-register-illustration {
+  width: 26.25rem;
+  height: 26.25rem;
+  margin-top: 5.625rem;
+  margin-bottom: 5.625rem;
+  margin-left: 11.25rem;
 }
 
 .btn-home-register {
   background-color: #36d1b2;
   color: white;
   border: black;
-  height: 56px !important;
-  width: 254px !important;
+  height: 3.5rem;
+  width: 15.875rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 500 !important;
-  font-size: 18px !important;
+  font-weight: 500;
+  font-size: 1.125rem;
 }
-.btn-home-einlogen {
-  background-color: #fff;
+
+.btn-home-start-application {
+  background-color: #36d1b2;
   color: white;
+  border: black;
+  height: 3.5rem;
+  width: 15.875rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.btn-home-einlogen-landingpage {
+  background-color: #fff;
+  color: black;
   border-color: #36d1b2;
-  height: 56px;
-  width: 254px !important;
-  font-weight: 500 !important;
-  font-size: 18px !important;
+  height: 3.5rem;
+  width: 15.875rem;
+  font-weight: 500;
+  font-size: 1.125rem;
   font-family: "Roboto", sans-serif;
 }
-h1{
-    font-family: "Roboto", sans-serif;
-    font-weight: 700 !important;
-    font-size: 36px !important;
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
 }
-.digital-case{
-  margin-top: 140px !important;
+
+.digital-case {
+  margin-top: 8.75rem;
 }
+
 .btn-home-tranzpranz {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   background-color: #fff;
   color: black;
   text-align: center;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   border: none;
   cursor: pointer;
-  width: 250px;
-  height: 50px;
+  width: 15.625rem;
+  height: 3.125rem;
 }
+
 .btn-home-tranzpranz-readme {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   background-color: #fff;
   color: black;
   text-align: center;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   border: none;
   cursor: pointer;
-  width: 250px;
-  height: 50px;
-  font-weight: 400 !important;
-  font-size: 18px !important;
+  width: 15.625rem;
+  height: 3.125rem;
+  font-weight: 400;
+  font-size: 1.125rem;
   font-family: "Roboto", sans-serif;
-  margin-left: 190px;
+  margin-left: 11.875rem;
 }
+
 .text-tranzpranz {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   color: #000000;
-  
-
-  margin-left: 190px;
+  margin-left: 11.875rem;
 }
+
 .home-tranzpranz h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   color: black;
-  margin-top: 90px;
-  margin-left: 190px;
-  width: 100% !important;
+  margin-top: 5.625rem;
+  margin-left: 11.875rem;
+  width: 100%;
 }
+
 .home-tranzpranz {
   background-color: #c2e3d8;
-  height: 414px;
+  height: 25.875rem;
   width: 100%;
   font-weight: 600;
-  font-weight: 600 !important;
-  font-size: 36px !important;
+  font-size: 2.25rem;
   font-family: "Roboto", sans-serif;
   color: #000000;
 }
+
 .btn-home-readmore {
   background-color: #fff;
   color: black;
   border: black;
-  height: 70px !important;
-  width: 240px !important;
+  height: 4.375rem;
+  width: 15rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 500 !important;
-  font-size: 18px !important;
-  margin-left: 170px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-left: 10.625rem;
 }
+
 .img-portrait {
-  width: 360px;
-  height: 420px;
+  width: 22.5rem;
+  height: 26.25rem;
 }
+
 .text-portrait {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   color: #000000;
-  height: 60px;
-  width: 360px;
+  height: 3.75rem;
+  width: 22.5rem;
   border-color: black;
-  border-width: 3px;
+  border-width: 0.1875rem;
   border-style: solid;
-  margin-top: 0.5px;
+  margin-top: 0.03125rem;
 }
