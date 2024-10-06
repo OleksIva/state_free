@@ -46,5 +46,5 @@ Once the repository is cloned, move into the project folder:
 Um die Backend-URL zu konfigurieren, erstelle eine `.env`-Datei im Stammverzeichnis des Projekts und füge die folgende Zeile hinzu:
 
 ```plaintext
-BACKEND_URL=https://dein-backend-url.com
+REACT_APP_BASE_URL=https://dein-backend-url.com
 
