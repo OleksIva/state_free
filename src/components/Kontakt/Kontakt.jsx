@@ -20,7 +20,7 @@ function Kontakt() {
             <div className="col-md-12 pt-5 text">
               <p>
                 Haben Sie unsere {" "} 
-                     <Link to ="/faq" className="color-faq text-decoration-underline">
+                     <Link to ="/FAQPage" className="color-faq text-decoration-underline">
                     FAQ </Link> {" "} gesehen? Dort finden Sie
                 möglicherweise die Anrwort,
                 <br />
