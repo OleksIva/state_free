@@ -27,6 +27,7 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       dispatch(login(response));
+      console.log(response)
       navigate("/"); 
     } catch (error) {
       const errorMsg = String(error).split("Error: ")[1] || "An unknown error occurred";
