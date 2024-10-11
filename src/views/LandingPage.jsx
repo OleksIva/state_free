@@ -7,10 +7,11 @@ import passportIllustrationPortrait from "../assets/Passport illustration - port
 import questionIllustrationPortrait from "../assets/Question illustration - portrait.jpg";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
+import { useSelector } from "react-redux";
 
 function LandingPage() {
   const navigate = useNavigate();
-
+  const state = useSelector(state => state)
   return (
     <div className="container-fluid py-1">
       <div>

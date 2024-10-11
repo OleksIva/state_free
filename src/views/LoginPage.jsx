@@ -46,7 +46,6 @@ const LoginPage = () => {
           <p className="text-title-login">Melden Sie sich bei Ihrem Konto an</p>
         </div>
       </div>
-
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-12">
