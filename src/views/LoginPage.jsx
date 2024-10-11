@@ -27,7 +27,6 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       dispatch(login(response));
-      console.log(response)
       navigate("/"); 
     } catch (error) {
       const errorMsg = String(error).split("Error: ")[1] || "An unknown error occurred";
@@ -47,7 +46,6 @@ const LoginPage = () => {
           <p className="text-title-login">Melden Sie sich bei Ihrem Konto an</p>
         </div>
       </div>
-
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-12">

@@ -12,7 +12,6 @@ import { useSelector } from "react-redux";
 function LandingPage() {
   const navigate = useNavigate();
   const state = useSelector(state => state)
-  console.log(state);
   return (
     <div className="container-fluid py-1">
       <div>
