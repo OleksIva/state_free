@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import "./LandingPage.css";
 import { useSelector } from "react-redux";
 
-function LandingPage() {
+function LandingPage() { 
   const navigate = useNavigate();
   const state = useSelector(state => state)
   return (
