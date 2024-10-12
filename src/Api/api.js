@@ -1,4 +1,4 @@
-const BASE_URL = "https://statefree-redilab.onrender.com";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export async function loginUser(email, password) {
   try {
