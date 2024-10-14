@@ -123,17 +123,11 @@
 
 // export default LoginPage;
 
-
-
-
-
-
-
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { loginUser } from "../Api/api"; // Your API call for login
-import { login } from "../store/userSlice"; // Import login action
+import { loginUser } from "../Api/api";
+import { login } from "../store/userSlice";
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -145,21 +139,21 @@ const LoginPage = () => {
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-    setError(""); // Reset error on new input
+    setError("");
   };
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-    setError(""); // Reset error on new input
+    setError("");
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await loginUser(email, password); // Call login API
-      localStorage.setItem("user", JSON.stringify(response)); // Save user to localStorage
-      dispatch(login(response)); // Dispatch login action to Redux
-      navigate("/"); // Navigate to home after login
+      const response = await loginUser(email, password);
+      localStorage.setItem("user", JSON.stringify(response));
+      dispatch(login(response));
+      navigate("/");
     } catch (error) {
       const errorMsg = String(error).split("Error: ")[1] || "An unknown error occurred";
       console.error("Login failure:", errorMsg);
@@ -254,4 +248,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
